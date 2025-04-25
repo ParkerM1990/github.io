@@ -21,7 +21,7 @@
     }).addTo(mapa);
 
     // Załaduj listę zgłoszonych parkomatów z arkusza Google
-  fetch("https://docs.google.com/spreadsheets/d/e/14oCZK33urCZCfK5uuU4DCdK3SYFj9C8Kd5o5HprRVjk#gid=1398714071/pub?output=csv")
+  fetch("https://docs.google.com/spreadsheets/d/14oCZK33urCZCfK5uuU4DCdK3SYFj9C8Kd5o5HprRVjk/edit?gid=1398714071#gid=1398714071/pub?output=csv")
     .then((response) => response.text())
     .then((csvText) => {
       const zgłoszone = new Set();
