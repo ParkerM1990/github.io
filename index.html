@@ -92,11 +92,26 @@
                 <a href="${formularzLink}" target="_blank">Zgłoś demontaż</a>
               `);
 // Dodajemy label (tooltip widoczny cały czas):
-marker.bindTooltip(`${p.kod}`, {
+const tooltip = marker.bindTooltip(`${p.kod}`, {
   permanent: true,
   direction: 'right',
   className: 'parkomat-label'
-});
+}).getTooltip();
+
+// Funkcja sprawdzająca zoom
+function toggleLabels() {
+  if (mapa.getZoom() >= 16) {
+    mapa.openTooltip(tooltip);
+  } else {
+    mapa.closeTooltip(tooltip);
+  }
+}
+
+// Sprawdzamy na starcie:
+toggleLabels();
+
+// I przy każdej zmianie zoomu:
+mapa.on('zoomend', toggleLabels);
             });
           });
       }
