@@ -31,7 +31,7 @@
       complete: function(results) {
         const wpisy = results.data;
         wpisy.forEach(wpis => {
-          const numer = wpis['Numer zdemontowanego parkomatu'];
+          const numer = wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123'];
           if (numer) {
             const cleanNumer = numer.toUpperCase().replace(/\s/g, '');
             zdemontowaneId.push(cleanNumer);
