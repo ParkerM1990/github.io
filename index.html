@@ -27,16 +27,6 @@
       z-index: 1000;
       box-shadow: 0 0 5px rgba(0,0,0,0.4);
     }
-    .legend div { display: flex; align-items: center; }
-    .legend div span { width: 18px; height: 18px; margin-right: 5px; display: inline-block; }
-    .parkomat-label {
-      background-color: white;
-      color: black;
-      border: 1px solid #999;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-size: 12px;
-    }
     #filter {
       position: absolute;
       top: 10px;
@@ -56,11 +46,9 @@
   </div>
   <div id="map"></div>
   <div class="legend">
-    <div><span style="background: green;"></span> Aktywny parkomat</div>
-    <div><span style="background: red;"></span> Zdemontowany parkomat</div>
+    <div><span style="background: green;"></span> Parkomat</div>
   </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const mapa = L.map("map").setView([52.2297, 21.0122], 13);
@@ -68,82 +56,32 @@
         attribution: "&copy; OpenStreetMap contributors"
       }).addTo(mapa);
 
-      const linkDoCsv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
-      let zdemontowaneId = [];
-      let allMarkers = [];
-      let allTooltips = [];
-
-      Papa.parse(linkDoCsv, {
-        download: true,
-        header: true,
-        complete: function(results) {
-          const wpisy = results.data;
-          wpisy.forEach(wpis => {
-            const numer = wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123'];
-            if (numer) {
-              const cleanNumer = numer.toUpperCase().replace(/\s/g, '');
-              zdemontowaneId.push(cleanNumer);
-            }
+      fetch("parkomaty.json")
+        .then(res => res.json())
+        .then(parkomaty => {
+          const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
+          const select = document.getElementById('strefaSelect');
+          strefy.forEach(strefa => {
+            const option = document.createElement('option');
+            option.value = strefa;
+            option.text = strefa;
+            select.appendChild(option);
           });
-          fetch("parkomaty.json")
-            .then((res) => res.json())
-            .then((dane) => {
-              const strefy = [...new Set(dane.map(p => p.strefa))].sort();
-              const select = document.getElementById('strefaSelect');
-              strefy.forEach(strefa => {
-                const option = document.createElement('option');
-                option.value = strefa;
-                option.text = strefa;
-                select.appendChild(option);
-              });
-              select.addEventListener('change', () => updateMarkers(dane));
-              updateMarkers(dane);
-            });
-        }
-      });
+          select.addEventListener('change', () => updateMarkers(parkomaty));
+          updateMarkers(parkomaty);
+        });
 
       function updateMarkers(dane) {
-        allMarkers.forEach(marker => mapa.removeLayer(marker));
-        allMarkers = [];
-        allTooltips = [];
+        mapa.eachLayer((layer) => {
+          if (layer instanceof L.CircleMarker) {
+            mapa.removeLayer(layer);
+          }
+        });
         const selected = Array.from(document.getElementById('strefaSelect').selectedOptions).map(opt => opt.value);
         dane.forEach((p) => {
           if (selected.length === 0 || selected.includes(p.strefa)) {
-            const idy = [(p.kod || '').toUpperCase(), (p.numer || '').toUpperCase(), (p.id || '').toUpperCase()];
-            const czyZdemontowany = idy.some(id => zdemontowaneId.includes(id));
-            const kolor = czyZdemontowany ? "red" : "green";
-            const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
-            const formularzLink = `https://docs.google.com/forms/d/e/1FAIpQLSfC3S9QAAhe74E__u0Ni8UQnwrj9EAXjhxuzDbYsx1Z2gRn9Q/viewform?usp=pp_url&entry.1769843837=${p.id}`;
-            marker.bindPopup(\`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><br/><a href="${formularzLink}" target="_blank">Zgłoś demontaż</a>\`);
-            const tooltip = marker.bindTooltip(\`\${p.kod}\`, { permanent: true, direction: 'right', className: 'parkomat-label' }).getTooltip();
-            allMarkers.push(marker);
-            allTooltips.push(tooltip);
-          }
-        });
-        avoidOverlappingLabels(allMarkers, allTooltips);
-        mapa.on('moveend zoomend', () => avoidOverlappingLabels(allMarkers, allTooltips));
-      }
-
-      function avoidOverlappingLabels(markers, tooltips) {
-        const positions = [];
-        const zoom = mapa.getZoom();
-        const bounds = mapa.getBounds();
-        markers.forEach((marker, i) => {
-          const point = mapa.latLngToLayerPoint(marker.getLatLng());
-          if (bounds.contains(marker.getLatLng()) && zoom >= 16) {
-            let tooClose = positions.some(pos => {
-              const dx = pos.x - point.x;
-              const dy = pos.y - point.y;
-              return Math.sqrt(dx * dx + dy * dy) < 30;
-            });
-            if (!tooClose) {
-              mapa.openTooltip(tooltips[i]);
-              positions.push(point);
-            } else {
-              mapa.closeTooltip(tooltips[i]);
-            }
-          } else {
-            mapa.closeTooltip(tooltips[i]);
+            const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: "green", fillOpacity: 0.8 }).addTo(mapa);
+            marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
           }
         });
       }
