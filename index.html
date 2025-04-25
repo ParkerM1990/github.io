@@ -8,26 +8,28 @@
   <style>
     html, body, #map { height: 100%; margin: 0; padding: 0; }
     .legend {
-      position: absolute;
-      bottom: 30px;
-      left: 10px;
-      background: white;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 14px;
-      line-height: 18px;
-      color: #333;
-    }
-    .legend div { display: flex; align-items: center; }
-    .legend div span { width: 18px; height: 18px; margin-right: 5px; display: inline-block; }
-    .parkomat-label {
-      background-color: white;
-      color: black;
-      border: 1px solid #999;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-size: 12px;
-    }
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  z-index: 1000; /* <-- dodajemy to! */
+  box-shadow: 0 0 5px rgba(0,0,0,0.4); /* lepsza widoczność */
+}
+.legend div {
+  display: flex;
+  align-items: center;
+}
+.legend div span {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  display: inline-block;
+}
   </style>
 </head>
 <body>
@@ -89,6 +91,12 @@
                 <b>Adres:</b> ${p.adres}<br/><br/>
                 <a href="${formularzLink}" target="_blank">Zgłoś demontaż</a>
               `);
+// Dodajemy label (tooltip widoczny cały czas):
+marker.bindTooltip(`${p.kod}`, {
+  permanent: true,
+  direction: 'right',
+  className: 'parkomat-label'
+});
             });
           });
       }
