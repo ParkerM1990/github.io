@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa Parkomatów - Filtrowanie po Strefach + Formularz Google</title>
+  <title>Test - Mapa Parkomatów (bez kolorowania)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
@@ -30,7 +30,7 @@
     #filter {
       position: absolute;
       top: 10px;
-      right: 10px; /* zmienione z left na right */
+      right: 10px;
       background: rgba(255, 255, 255, 0.9);
       padding: 10px;
       border-radius: 5px;
@@ -46,11 +46,9 @@
   </div>
   <div id="map"></div>
   <div class="legend">
-    <div><span style="background: green;"></span> Aktywny parkomat</div>
-    <div><span style="background: red;"></span> Zdemontowany parkomat</div>
+    <div><span style="background: green;"></span> Parkomat</div>
   </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const mapa = L.map("map").setView([52.2297, 21.0122], 13);
@@ -58,37 +56,20 @@
         attribution: "&copy; OpenStreetMap contributors"
       }).addTo(mapa);
 
-      const linkDoCsv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
-      let zdemontowaneId = [];
-
-      Papa.parse(linkDoCsv, {
-        download: true,
-        header: true,
-        complete: function(results) {
-          const wpisy = results.data;
-          wpisy.forEach(wpis => {
-            const numer = wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123'];
-            if (numer) {
-              const cleanNumer = numer.toUpperCase().replace(/\s/g, '');
-              zdemontowaneId.push(cleanNumer);
-            }
+      fetch("parkomaty.json")
+        .then(res => res.json())
+        .then(parkomaty => {
+          const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
+          const select = document.getElementById('strefaSelect');
+          strefy.forEach(strefa => {
+            const option = document.createElement('option');
+            option.value = strefa;
+            option.text = strefa;
+            select.appendChild(option);
           });
-          fetch("parkomaty.json")
-            .then(res => res.json())
-            .then(parkomaty => {
-              const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
-              const select = document.getElementById('strefaSelect');
-              strefy.forEach(strefa => {
-                const option = document.createElement('option');
-                option.value = strefa;
-                option.text = strefa;
-                select.appendChild(option);
-              });
-              select.addEventListener('change', () => updateMarkers(parkomaty));
-              updateMarkers(parkomaty);
-            });
-        }
-      });
+          select.addEventListener('change', () => updateMarkers(parkomaty));
+          updateMarkers(parkomaty);
+        });
 
       function updateMarkers(dane) {
         mapa.eachLayer((layer) => {
@@ -99,10 +80,7 @@
         const selected = Array.from(document.getElementById('strefaSelect').selectedOptions).map(opt => opt.value);
         dane.forEach((p) => {
           if (selected.length === 0 || selected.includes(p.strefa)) {
-            const idy = [(p.kod || '').toUpperCase(), (p.numer || '').toUpperCase(), (p.id || '').toUpperCase()];
-            const czyZdemontowany = idy.some(id => zdemontowaneId.includes(id));
-            const kolor = czyZdemontowany ? "red" : "green";
-            const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
+            const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: "green", fillOpacity: 0.8 }).addTo(mapa);
             marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
           }
         });
