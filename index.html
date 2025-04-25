@@ -39,12 +39,16 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script>
-    const mapa = L.map("map").setView([52.2297, 21.0122], 13);
+    const mapa = L.map("map").setView([52.2297, 21.0122], 13); // Warszawa
+
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap",
     }).addTo(mapa);
+
     const linkDoCsv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
+
     let zdemontowaneId = [];
+
     Papa.parse(linkDoCsv, {
       download: true,
       header: true,
@@ -57,6 +61,8 @@
             zdemontowaneId.push(cleanNumer);
           }
         });
+
+        // Wczytanie danych z parkomaty.json:
         fetch("parkomaty.json")
           .then((res) => res.json())
           .then((dane) => {
@@ -66,24 +72,23 @@
                 (p.numer || '').toUpperCase(),
                 (p.id || '').toUpperCase()
               ];
+
               const czyZdemontowany = idy.some(id => zdemontowaneId.includes(id));
               const kolor = czyZdemontowany ? "red" : "green";
+
               const marker = L.circleMarker([p.lat, p.lon], {
                 radius: 8,
                 color: kolor,
                 fillOpacity: 0.8,
               }).addTo(mapa);
+
               const formularzLink = `https://docs.google.com/forms/d/e/1FAIpQLSfC3S9QAAhe74E__u0Ni8UQnwrj9EAXjhxuzDbYsx1Z2gRn9Q/viewform?usp=pp_url&entry.1769843837=${p.id}`;
-              marker.bindPopup(\`
+
+              marker.bindPopup(`
                 <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
                 <b>Adres:</b> ${p.adres}<br/><br/>
                 <a href="${formularzLink}" target="_blank">Zgłoś demontaż</a>
-              \`);
-              marker.bindTooltip(\`\${p.kod}\`, {
-                permanent: true,
-                direction: 'right',
-                className: 'parkomat-label'
-              });
+              `);
             });
           });
       }
