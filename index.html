@@ -20,41 +20,40 @@
       attribution: "&copy; OpenStreetMap",
     }).addTo(mapa);
 
-    // Załaduj listę zgłoszonych parkomatów z arkusza Google
-  fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRMgxBPavYu19NHTCzF1Zu1XfU2k0N6L1_WaW1A0Hn77BYYF2DO8aWtnTOEmBVEOSy6kFwFUKuHnHBO/pub?output=csv")
-    .then((response) => response.text())
-    .then((csvText) => {
-      const zgłoszone = new Set();
-      const rows = csvText.split("
-").slice(1); // Pomijamy nagłówek
-      rows.forEach((row) => {
-        const values = row.split(",");
-        const numer = values[0]?.trim(); // Zakładamy, że numer parkomatu jest w pierwszej kolumnie
-        if (numer) zgłoszone.add(numer);
-      });
-
-      // Teraz ładujemy dane parkomatów i porównujemy
-      fetch("parkomaty.json")
-        .then((res) => res.json())
-        .then((dane) => {
-          dane.forEach((p) => {
-            const kolor = zgłoszone.has(p.numer) ? "red" : "green";
-            const marker = L.circleMarker([p.lat, p.lon], {
-              radius: 8,
-              color: kolor,
-              fillOpacity: 0.8,
-            }).addTo(mapa);
-
-            const formularzLink = `https://docs.google.com/forms/d/e/1FAIpQLSfC3S9QAAhe74E__u0Ni8UQnwrj9EAXjhxuzDbYsx1Z2gRn9Q/viewform?usp=pp_url&entry.1769843837=${p.id}`;
-
-            marker.bindPopup(`
-              <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
-              <b>Adres:</b> ${p.adres}<br/><br/>
-              <a href="${formularzLink}" target="_blank">Zgłoś demontaż</a>
-            `);
-          });
-        });
+	// Załaduj listę zgłoszonych parkomatów z arkusza Google
+fetch("https://docs.google.com/spreadsheets/d/14oCZK33urCZCfK5uuU4DCdK3SYFj9C8Kd5o5HprRVjk/export?format=csv")
+  .then((response) => response.text())
+  .then((csvText) => {
+    const zgłoszone = new Set();
+    const rows = csvText.split("\\n").slice(1); // Pomijamy nagłówek
+    rows.forEach((row) => {
+      const values = row.split(",");
+      const numer = values[0]?.trim(); // Zakładamy, że numer parkomatu jest w pierwszej kolumnie
+      if (numer) zgłoszone.add(numer);
     });
+
+    // Teraz ładujemy dane parkomatów i porównujemy
+    fetch("parkomaty.json")
+      .then((res) => res.json())
+      .then((dane) => {
+        dane.forEach((p) => {
+          const kolor = zgłoszone.has(p.numer) ? "red" : "green";
+          const marker = L.circleMarker([p.lat, p.lon], {
+            radius: 8,
+            color: kolor,
+            fillOpacity: 0.8,
+          }).addTo(mapa);
+
+          const formularzLink = `https://docs.google.com/forms/d/e/1FAIpQLSfC3S9QAAhe74E__u0Ni8UQnwrj9EAXjhxuzDbYsx1Z2gRn9Q/viewform?usp=pp_url&entry.1769843837=${p.id}`;
+
+          marker.bindPopup(\`
+            <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
+            <b>Adres:</b> ${p.adres}<br/><br/>
+            <a href="${formularzLink}" target="_blank">Zgłoś demontaż</a>
+          \`);
+        });
+      });
+  });
       });
   </script>
 </body>
