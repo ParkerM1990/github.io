@@ -101,7 +101,7 @@
         const selected = Array.from(document.getElementById('strefaSelect').selectedOptions).map(opt => opt.value);
         dane.forEach((p) => {
           if (selected.length === 0 || selected.includes(p.strefa)) {
-            const idy = [(p.kod || '').toUpperCase(), (p.numer || '').toUpperCase(), (p.id || '').toUpperCase()];
+            const idy = [(p.kod || '').toString().toUpperCase(), (p.numer || '').toString().toUpperCase(), (p.id || '').toString().toUpperCase()];
             const czyZdemontowany = idy.some(id => zdemontowaneId.includes(id));
             const kolor = czyZdemontowany ? "red" : "green";
             const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
