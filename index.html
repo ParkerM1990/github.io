@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa Parkomatów - Poprawiona Wersja</title>
+  <title>Mapa Parkomatów - Poprawiona Wersja z Filtrem</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
@@ -24,9 +24,25 @@
     }
     .legend div { display: flex; align-items: center; }
     .legend div span { width: 18px; height: 18px; margin-right: 5px; display: inline-block; }
+
+    #filter {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
   </style>
 </head>
 <body>
+  <div id="filter">
+    <label>Wybierz strefy:</label><br/>
+    <select id="strefaSelect" multiple size="5"></select>
+  </div>
+
   <div id="map"></div>
 
   <div class="legend">
@@ -57,6 +73,7 @@
         .then(res => res.json())
         .then(parkomaty => {
           parkomatyData = parkomaty;
+          updateStrefy(parkomaty);
           updateMarkers();
           loadDemontowane();
         });
@@ -87,8 +104,22 @@
           });
       }
 
-      // Funkcja aktualizująca markery
+      function updateStrefy(parkomaty) {
+        const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
+        const select = document.getElementById('strefaSelect');
+        select.innerHTML = '';
+        strefy.forEach(strefa => {
+          const option = document.createElement('option');
+          option.value = strefa;
+          option.text = strefa;
+          select.appendChild(option);
+        });
+        select.addEventListener('change', updateMarkers);
+      }
+
       function updateMarkers() {
+        const selectedStrefy = Array.from(document.getElementById('strefaSelect').selectedOptions).map(opt => opt.value);
+
         mapa.eachLayer(layer => {
           if (layer instanceof L.CircleMarker) mapa.removeLayer(layer);
         });
@@ -97,11 +128,10 @@
           const idy = [String(p.kod || '').toUpperCase(), String(p.numer || '').toUpperCase()];
           let kolor = 'green';
 
-          if (idy.some(id => fundamentyId.includes(id))) {
-            kolor = 'black';
-          } else if (idy.some(id => zdemontowaneId.includes(id))) {
-            kolor = 'red';
-          }
+          if (selectedStrefy.length > 0 && !selectedStrefy.includes(p.strefa)) return;
+
+          if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
+          else if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
 
           const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
           marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
