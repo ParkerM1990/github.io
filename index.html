@@ -25,7 +25,7 @@
     .legend div { display: flex; align-items: center; }
     .legend div span { width: 18px; height: 18px; margin-right: 5px; display: inline-block; }
 
-    #filter {
+    #filter, #search {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -34,10 +34,20 @@
       border-radius: 5px;
       z-index: 1000;
       box-shadow: 0 0 5px rgba(0,0,0,0.4);
+      margin-bottom: 10px;
+    }
+
+    #search {
+      top: 60px;
     }
   </style>
 </head>
 <body>
+  <div id="search" style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 5px; z-index: 1000; box-shadow: 0 0 5px rgba(0,0,0,0.4);">
+  <label>Wyszukaj parkomat:</label><br/>
+  <input type="text" id="searchInput" placeholder="Wpisz numer parkomatu">
+  <button id="searchBtn">Szukaj</button>
+</div>
   <div id="filter">
     <label>Wybierz strefy:</label><br/>
     <select id="strefaSelect" multiple size="5"></select>
@@ -146,6 +156,20 @@
     marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
   });
 }
+    // Wyszukiwanie po numerze parkomatu
+      document.getElementById('searchBtn').addEventListener('click', function () {
+        const query = document.getElementById('searchInput').value.trim().toUpperCase();
+        const found = parkomatyData.find(p => 
+          String(p.numer).toUpperCase() === query || 
+          String(p.kod).toUpperCase() === query
+        );
+
+        if (found) {
+          mapa.setView([found.lat, found.lon], 16);
+        } else {
+          alert("Parkomat nie znaleziony.");
+        }
+      });
     });
   </script>
 </body>
