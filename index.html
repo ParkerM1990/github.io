@@ -94,7 +94,7 @@
         });
 
         parkomatyData.forEach(p => {
-          const idy = [(p.kod || '').toUpperCase(), (p.numer || '').toUpperCase()];
+          const idy = [String(p.kod || '').toUpperCase(), String(p.numer || '').toUpperCase()];
           let kolor = 'green';
 
           if (idy.some(id => fundamentyId.includes(id))) {
