@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa Parkomatów - Poprawiona Wersja z Filtrem</title>
+  <title>Mapa Parkomatów - Wyszukiwanie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
@@ -43,14 +43,16 @@
   </style>
 </head>
 <body>
-  <div id="search" style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 5px; z-index: 1000; box-shadow: 0 0 5px rgba(0,0,0,0.4);">
-  <label>Wyszukaj parkomat:</label><br/>
-  <input type="text" id="searchInput" placeholder="Wpisz numer parkomatu">
-  <button id="searchBtn">Szukaj</button>
-</div>
+
   <div id="filter">
     <label>Wybierz strefy:</label><br/>
     <select id="strefaSelect" multiple size="5"></select>
+  </div>
+
+  <div id="search">
+    <label>Wyszukaj parkomat:</label><br/>
+    <input type="text" id="searchInput" placeholder="Wpisz numer parkomatu">
+    <button id="searchBtn">Szukaj</button>
   </div>
 
   <div id="map"></div>
@@ -88,20 +90,18 @@
           loadDemontowane();
         });
 
-      // Pobierz zdemontowane
       function loadDemontowane() {
         Papa.parse(linkDoCsv, {
           download: true,
           header: true,
           complete: function(results) {
-            zdemontowaneId = results.data.map(wpis => (wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim());
+            zdemontowaneId = results.data.map(wpis => String(wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
             updateMarkers();
             loadFundamenty();
           }
         });
       }
 
-      // Pobierz fundamenty
       function loadFundamenty() {
         fetch(fundamentyUrl)
           .then(res => res.arrayBuffer())
@@ -111,8 +111,6 @@
             const data = XLSX.utils.sheet_to_json(sheet);
             fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
             updateMarkers();
-            console.log("Fundamenty ID (czarne):", fundamentyId);
-            console.log("Parkomaty Data:", parkomatyData.map(p => p.numer));
           });
       }
 
@@ -130,33 +128,23 @@
       }
 
       function updateMarkers() {
-  mapa.eachLayer(layer => {
-    if (layer instanceof L.CircleMarker) mapa.removeLayer(layer);
-  });
+        mapa.eachLayer(layer => {
+          if (layer instanceof L.CircleMarker) mapa.removeLayer(layer);
+        });
 
-  parkomatyData.forEach(p => {
-    const idy = [String(p.kod || '').toUpperCase().trim(), String(p.numer || '').toUpperCase().trim()];
-    let kolor = 'green';
+        parkomatyData.forEach(p => {
+          const idy = [String(p.kod || '').toUpperCase().trim(), String(p.numer || '').toUpperCase().trim()];
+          let kolor = 'green';
 
-    // Sprawdzamy fundamenty najpierw (mają wyższy priorytet)
-    if (idy.some(id => fundamentyId.includes(id))) {
-      kolor = 'black';
-    } else if (idy.some(id => zdemontowaneId.includes(id))) {
-      kolor = 'red';
-    }
+          if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
+          else if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
 
-    // Tworzenie markera z odpowiednim kolorem i priorytetem
-    const marker = L.circleMarker([p.lat, p.lon], { 
-      radius: 8, 
-      color: kolor, 
-      fillOpacity: 0.8,
-      zIndexOffset: kolor === 'black' ? 1000 : 0  // Czarny zawsze na wierzchu
-    }).addTo(mapa);
-    
-    marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
-  });
-}
-    // Wyszukiwanie po numerze parkomatu
+          const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
+          marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
+        });
+      }
+
+      // Wyszukiwanie po numerze parkomatu
       document.getElementById('searchBtn').addEventListener('click', function () {
         const query = document.getElementById('searchInput').value.trim().toUpperCase();
         const found = parkomatyData.find(p => 
