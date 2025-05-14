@@ -99,8 +99,10 @@
             const workbook = XLSX.read(buffer, { type: 'array' });
             const sheet = workbook.Sheets[workbook.SheetNames[0]];
             const data = XLSX.utils.sheet_to_json(sheet);
-            fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim());
+            fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
             updateMarkers();
+            console.log("Fundamenty ID (czarne):", fundamentyId);
+            console.log("Parkomaty Data:", parkomatyData.map(p => p.numer));
           });
       }
 
