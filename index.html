@@ -94,6 +94,35 @@
 
           // Pobierz parkomaty
           fetch("parkomaty.json")
+        .then(res => res.json())
+        .then(parkomaty => {
+          updateMarkers(parkomaty);
+
+          // Po pobraniu fundamentów i zdemontowanych, zaktualizuj kolory markerów
+          fetch(fundamentyUrl)
+            .then(res => res.arrayBuffer())
+            .then(buffer => {
+              const workbook = XLSX.read(buffer, { type: 'array' });
+              const sheet = workbook.Sheets[workbook.SheetNames[0]];
+              const data = XLSX.utils.sheet_to_json(sheet);
+              fundamentyId = data.map(row => (row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim());
+              updateMarkers(parkomaty);
+            });
+
+          Papa.parse(linkDoCsv, {
+            download: true,
+            header: true,
+            complete: function(results) {
+              results.data.forEach(wpis => {
+                const numer = wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123'];
+                if (numer) {
+                  zdemontowaneId.push(numer.toUpperCase().trim());
+                }
+              });
+              updateMarkers(parkomaty);
+            }
+          });
+        });
             .then(res => res.json())
             .then(parkomaty => updateMarkers(parkomaty));
         }
