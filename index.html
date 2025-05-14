@@ -130,8 +130,9 @@
 
           if (selectedStrefy.length > 0 && !selectedStrefy.includes(p.strefa)) return;
 
-          if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
-          else if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
+          if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
+          else if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
+           
 
           const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
           marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
