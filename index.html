@@ -171,7 +171,44 @@
         } else {
           alert("Parkomat nie znaleziony.");
         }
-      });
+      
+    // Wyświetlanie bieżącej lokalizacji użytkownika
+    let locationMarker = null;
+
+    function showCurrentLocation() {
+      if (!navigator.geolocation) {
+        console.log("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+
+          // Usuń poprzedni marker lokalizacji, jeśli istnieje
+          if (locationMarker) {
+            mapa.removeLayer(locationMarker);
+          }
+
+          // Dodaj nowy marker lokalizacji
+          locationMarker = L.circleMarker([latitude, longitude], {
+            radius: 10,
+            color: "blue",
+            fillOpacity: 0.8
+          }).addTo(mapa);
+
+          locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+        },
+        (error) => {
+          console.log("Błąd geolokalizacji:", error);
+        }
+      );
+    }
+
+    // Wywołanie funkcji lokalizacji po zakończeniu aktualizacji markerów
+    showCurrentLocation();
+
+  });
     });
   </script>
 </body>
