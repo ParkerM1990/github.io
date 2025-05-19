@@ -5,7 +5,59 @@
   <title>Mapa Parkomatów - Wyszukiwanie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js">
+
+// Funkcja lokalizacji użytkownika
+let locationMarker = null;
+
+function showCurrentLocation() {
+  if (!navigator.geolocation) {
+    console.log("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+
+      // Usuń poprzedni marker lokalizacji, jeśli istnieje
+      if (locationMarker) {
+        mapa.removeLayer(locationMarker);
+      }
+
+      // Dodaj nowy marker lokalizacji
+      locationMarker = L.circleMarker([latitude, longitude], {
+        radius: 10,
+        color: "blue",
+        fillOpacity: 0.8
+      }).addTo(mapa);
+
+      locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+    },
+    (error) => {
+      console.log("Błąd geolokalizacji:", error);
+    }
+  );
+}
+
+// Funkcja ładowania fundamentów z lokalizacją na końcu
+function loadFundamenty() {
+  fetch(fundamentyUrl)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(sheet);
+      fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
+
+      updateMarkers();
+
+      // Wywołanie lokalizacji użytkownika po zakończeniu ładowania fundamentów
+      showCurrentLocation();
+    });
+}
+
+</script>
   <style>
     html, body { height: 100%; margin: 0; padding: 0; }
     #map { position: absolute; top: 0; bottom: 0; right: 0; left: 0; }
@@ -65,8 +117,112 @@
     <div><span style="background: black;"></span> Zdemontowane Fundamenty</div>
   </div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js">
+
+// Funkcja lokalizacji użytkownika
+let locationMarker = null;
+
+function showCurrentLocation() {
+  if (!navigator.geolocation) {
+    console.log("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+
+      // Usuń poprzedni marker lokalizacji, jeśli istnieje
+      if (locationMarker) {
+        mapa.removeLayer(locationMarker);
+      }
+
+      // Dodaj nowy marker lokalizacji
+      locationMarker = L.circleMarker([latitude, longitude], {
+        radius: 10,
+        color: "blue",
+        fillOpacity: 0.8
+      }).addTo(mapa);
+
+      locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+    },
+    (error) => {
+      console.log("Błąd geolokalizacji:", error);
+    }
+  );
+}
+
+// Funkcja ładowania fundamentów z lokalizacją na końcu
+function loadFundamenty() {
+  fetch(fundamentyUrl)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(sheet);
+      fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
+
+      updateMarkers();
+
+      // Wywołanie lokalizacji użytkownika po zakończeniu ładowania fundamentów
+      showCurrentLocation();
+    });
+}
+
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js">
+
+// Funkcja lokalizacji użytkownika
+let locationMarker = null;
+
+function showCurrentLocation() {
+  if (!navigator.geolocation) {
+    console.log("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+
+      // Usuń poprzedni marker lokalizacji, jeśli istnieje
+      if (locationMarker) {
+        mapa.removeLayer(locationMarker);
+      }
+
+      // Dodaj nowy marker lokalizacji
+      locationMarker = L.circleMarker([latitude, longitude], {
+        radius: 10,
+        color: "blue",
+        fillOpacity: 0.8
+      }).addTo(mapa);
+
+      locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+    },
+    (error) => {
+      console.log("Błąd geolokalizacji:", error);
+    }
+  );
+}
+
+// Funkcja ładowania fundamentów z lokalizacją na końcu
+function loadFundamenty() {
+  fetch(fundamentyUrl)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(sheet);
+      fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
+
+      updateMarkers();
+
+      // Wywołanie lokalizacji użytkownika po zakończeniu ładowania fundamentów
+      showCurrentLocation();
+    });
+}
+
+</script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -104,7 +260,7 @@
         });
       }
 
-      function loadFundamenty() {
+      function loadFundamenty_OLD() {
         fetch(fundamentyUrl)
           .then(res => res.arrayBuffer())
           .then(buffer => {
@@ -173,6 +329,106 @@
         }
       });
     });
-  </script>
+  
+
+// Funkcja lokalizacji użytkownika
+let locationMarker = null;
+
+function showCurrentLocation() {
+  if (!navigator.geolocation) {
+    console.log("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+
+      // Usuń poprzedni marker lokalizacji, jeśli istnieje
+      if (locationMarker) {
+        mapa.removeLayer(locationMarker);
+      }
+
+      // Dodaj nowy marker lokalizacji
+      locationMarker = L.circleMarker([latitude, longitude], {
+        radius: 10,
+        color: "blue",
+        fillOpacity: 0.8
+      }).addTo(mapa);
+
+      locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+    },
+    (error) => {
+      console.log("Błąd geolokalizacji:", error);
+    }
+  );
+}
+
+// Funkcja ładowania fundamentów z lokalizacją na końcu
+function loadFundamenty() {
+  fetch(fundamentyUrl)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(sheet);
+      fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
+
+      updateMarkers();
+
+      // Wywołanie lokalizacji użytkownika po zakończeniu ładowania fundamentów
+      showCurrentLocation();
+    });
+}
+
+</script>
 </body>
 </html>
+
+// Funkcja lokalizacji użytkownika
+let locationMarker = null;
+
+function showCurrentLocation() {
+  if (!navigator.geolocation) {
+    console.log("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+
+      // Usuń poprzedni marker lokalizacji, jeśli istnieje
+      if (locationMarker) {
+        mapa.removeLayer(locationMarker);
+      }
+
+      // Dodaj nowy marker lokalizacji
+      locationMarker = L.circleMarker([latitude, longitude], {
+        radius: 10,
+        color: "blue",
+        fillOpacity: 0.8
+      }).addTo(mapa);
+
+      locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+    },
+    (error) => {
+      console.log("Błąd geolokalizacji:", error);
+    }
+  );
+}
+
+// Wywołanie funkcji lokalizacji na końcu procesu ładowania fundamentów
+function loadFundamenty() {
+  fetch(fundamentyUrl)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(sheet);
+      fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
+      
+      updateMarkers();
+      showCurrentLocation(); // Wywołanie lokalizacji po zakończeniu ładowania fundamentów
+    });
+}
