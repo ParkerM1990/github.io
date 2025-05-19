@@ -194,7 +194,8 @@
           locationMarker = L.circleMarker([latitude, longitude], {
             radius: 10,
             color: "blue",
-            fillOpacity: 0.8
+            fillOpacity: 0.8,
+            zIndexOffset: 1000
           }).addTo(mapa);
 
           locationMarker.bindPopup("Twoja lokalizacja").openPopup();
