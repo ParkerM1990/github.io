@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa Parkomatów - Wyszukiwanie</title>
+  <title>Mapa Parkomatów - Wyszukiwanie i Lokalizacja</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
@@ -24,155 +25,110 @@
     }
     .legend div { display: flex; align-items: center; }
     .legend div span { width: 18px; height: 18px; margin-right: 5px; display: inline-block; }
-
-    #filter, #search {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 10px;
-      border-radius: 5px;
-      z-index: 1000;
-      box-shadow: 0 0 5px rgba(0,0,0,0.4);
-      margin-bottom: 10px;
-    }
-
-    #search {
-      top: 60px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Filtrowanie stref po prawej stronie -->
-<div id="filter" style="position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 5px; z-index: 1000; box-shadow: 0 0 5px rgba(0,0,0,0.4);">
-  <label>Wybierz strefy:</label><br/>
-  <select id="strefaSelect" multiple size="5"></select>
+<div id="map"></div>
+
+<div class="legend">
+  <div><span style="background: green;"></span> Aktywny parkomat (<span id="greenCount">0</span>)</div>
+  <div><span style="background: red;"></span> Zdemontowany parkomat (<span id="redCount">0</span>)</div>
+  <div><span style="background: black;"></span> Zdemontowane Fundamenty (<span id="blackCount">0</span>)</div>
 </div>
 
-<!-- Wyszukiwanie po środku strony -->
-<div id="search" style="position: absolute; top: 8%; left: 50%; transform: translate(-50%, -50%); width: 150px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 8px; z-index: 1001; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-  <label>Wyszukaj:</label><br/>
-  <input type="text" id="searchInput" placeholder="Nr parkomatu" style="width: 100px; padding: 5px; margin-right: 5px;">
-  <button id="searchBtn">🔍</button>
-</div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const mapa = L.map("map").setView([52.2297, 21.0122], 13);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(mapa);
 
-  <div id="map"></div>
+    let locationMarker = null;
+    let greenCount = 0;
+    let redCount = 0;
+    let blackCount = 0;
 
-  <div class="legend">
-    <div><span style="background: green;"></span> Aktywny parkomat</div>
-    <div><span style="background: red;"></span> Zdemontowany parkomat</div>
-    <div><span style="background: black;"></span> Zdemontowane Fundamenty</div>
-  </div>
-
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const mapa = L.map("map").setView([52.2297, 21.0122], 13);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: "&copy; OpenStreetMap contributors"
-      }).addTo(mapa);
-
-      const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?output=xlsx';
-      const linkDoCsv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
-
-      let fundamentyId = [];
-      let zdemontowaneId = [];
-      let parkomatyData = [];
-
-      // Pobierz parkomaty
-      fetch("parkomaty.json")
-        .then(res => res.json())
-        .then(parkomaty => {
-          parkomatyData = parkomaty;
-          updateStrefy(parkomaty);
-          updateMarkers();
-          loadDemontowane();
-        });
-
-      function loadDemontowane() {
-        Papa.parse(linkDoCsv, {
-          download: true,
-          header: true,
-          complete: function(results) {
-            zdemontowaneId = results.data.map(wpis => String(wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
-            updateMarkers();
-            loadFundamenty();
-          }
-        });
-      }
-
-      function loadFundamenty() {
-        fetch(fundamentyUrl)
-          .then(res => res.arrayBuffer())
-          .then(buffer => {
-            const workbook = XLSX.read(buffer, { type: 'array' });
-            const sheet = workbook.Sheets[workbook.SheetNames[0]];
-            const data = XLSX.utils.sheet_to_json(sheet);
-            fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
-            updateMarkers();
-          });
-      }
-
-      function updateStrefy(parkomaty) {
-        const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
-        const select = document.getElementById('strefaSelect');
-        select.innerHTML = '';
-        strefy.forEach(strefa => {
-          const option = document.createElement('option');
-          option.value = strefa;
-          option.text = strefa;
-          select.appendChild(option);
-        });
-        select.addEventListener('change', updateMarkers);
-      }
-
-      function updateMarkers() {
-  const selectedStrefy = Array.from(document.getElementById('strefaSelect').selectedOptions).map(opt => opt.value);
-
-  mapa.eachLayer(layer => {
-    if (layer instanceof L.CircleMarker) mapa.removeLayer(layer);
-  });
-
-  parkomatyData.forEach(p => {
-    const idy = [String(p.kod || '').toUpperCase().trim(), String(p.numer || '').toUpperCase().trim()];
-    let kolor = 'green';
-
-    // Sprawdź, czy strefa jest wybrana
-    if (selectedStrefy.length > 0 && !selectedStrefy.includes(p.strefa)) {
-      console.log(`Pominięto parkomat ${p.numer} - strefa: ${p.strefa}`);
-      return; // Pomijamy marker spoza wybranych stref
+    function updateLegend() {
+      document.getElementById('greenCount').textContent = greenCount;
+      document.getElementById('redCount').textContent = redCount;
+      document.getElementById('blackCount').textContent = blackCount;
     }
 
-    if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
-    else if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
-
-    const marker = L.circleMarker([p.lat, p.lon], { 
-      radius: 8, 
-      color: kolor, 
-      fillOpacity: 0.8 
-    }).addTo(mapa);
-          marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
-        });
+    function showCurrentLocation() {
+      if (!navigator.geolocation) {
+        alert("Geolokalizacja nie jest wspierana przez Twoją przeglądarkę.");
+        return;
       }
 
-      // Wyszukiwanie po numerze parkomatu
-      document.getElementById('searchBtn').addEventListener('click', function () {
-        const query = document.getElementById('searchInput').value.trim().toUpperCase();
-        const found = parkomatyData.find(p => 
-          String(p.numer).toUpperCase() === query || 
-          String(p.kod).toUpperCase() === query
-        );
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
 
-        if (found) {
-          mapa.setView([found.lat, found.lon], 16);
-        } else {
-          alert("Parkomat nie znaleziony.");
+          if (locationMarker) {
+            mapa.removeLayer(locationMarker);
+          }
+
+          locationMarker = L.circleMarker([latitude, longitude], {
+            radius: 10,
+            color: "blue",
+            fillOpacity: 0.8
+          }).addTo(mapa);
+
+          locationMarker.bindPopup("Twoja lokalizacja").openPopup();
+        },
+        (error) => {
+          console.log("Błąd geolokalizacji:", error);
+          alert("Nie udało się pobrać Twojej lokalizacji.");
+        }
+      );
+    }
+
+    function updateMarkers() {
+      greenCount = 0;
+      redCount = 0;
+      blackCount = 0;
+
+      mapa.eachLayer(layer => {
+        if (layer instanceof L.CircleMarker && layer !== locationMarker) {
+          mapa.removeLayer(layer);
         }
       });
-    });
-  </script>
+
+      // Przykładowe dane
+      const markersData = [
+        { lat: 52.2297, lon: 21.0122, status: "active" },
+        { lat: 52.2298, lon: 21.0123, status: "removed" },
+        { lat: 52.2299, lon: 21.0124, status: "fundament" }
+      ];
+
+      markersData.forEach(p => {
+        let color = "green";
+        if (p.status === "removed") {
+          color = "red";
+          redCount++;
+        } else if (p.status === "fundament") {
+          color = "black";
+          blackCount++;
+        } else {
+          greenCount++;
+        }
+
+        L.circleMarker([p.lat, p.lon], {
+          radius: 8,
+          color: color,
+          fillOpacity: 0.8
+        }).addTo(mapa);
+      });
+
+      updateLegend();
+    }
+
+    updateMarkers();
+    showCurrentLocation();
+  });
+</script>
+
 </body>
 </html>
