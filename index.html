@@ -56,19 +56,25 @@
 </head>
 <body>
 
+<!-- Filtrowanie stref po prawej stronie -->
+<div id="filter" style="position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 5px; z-index: 1000; box-shadow: 0 0 5px rgba(0,0,0,0.4);">
+  <label>Wybierz strefy:</label><br/>
+  <select id="strefaSelect" multiple size="5"></select>
+</div>
+
+<!-- Wyszukiwanie po środku strony -->
+<div id="search" style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 8px; z-index: 1001; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+  <label>Wyszukaj parkomat:</label><br/>
+  <input type="text" id="searchInput" placeholder="Wpisz numer parkomatu" style="width: 150px; padding: 5px; margin-right: 5px;">
+  <button id="searchBtn">Szukaj</button>
+</div>
+
   <div id="map"></div>
 
-  <!-- Filtrowanie stref -->
-  <div id="filter" style="position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 5px; z-index: 1000;">
-    <label>Wybierz strefy:</label><br/>
-    <select id="strefaSelect" multiple size="5"></select>
-  </div>
-
-  <!-- Wyszukiwanie po numerze -->
-  <div id="search" style="position: absolute; top: 60px; right: 10px; background: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 5px; z-index: 1001;">
-    <label>Wyszukaj parkomat:</label><br/>
-    <input type="text" id="searchInput" placeholder="Wpisz numer parkomatu" style="width: 150px;">
-    <button id="searchBtn">Szukaj</button>
+  <div class="legend">
+    <div><span style="background: green;"></span> Aktywny parkomat</div>
+    <div><span style="background: red;"></span> Zdemontowany parkomat</div>
+    <div><span style="background: black;"></span> Zdemontowane Fundamenty</div>
   </div>
 
   <!-- Przycisk odświeżania -->
