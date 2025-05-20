@@ -49,9 +49,6 @@
       margin-bottom: 10px;
     }
 
-    #search {
-      top: 60px;
-    }
   </style>
 </head>
 <body>
@@ -98,6 +95,7 @@
       let parkomatyData = [];
       let locationMarker = null;
 
+      // Pobierz parkomaty
       fetch("parkomaty.json")
         .then(res => res.json())
         .then(parkomaty => {
@@ -146,6 +144,7 @@
       }
 
       function updateMarkers() {
+        const selectedStrefy = Array.from(document.getElementById('strefaSelect').selectedOptions).map(opt => opt.value);
         mapa.eachLayer(layer => {
           if (layer instanceof L.CircleMarker && layer !== locationMarker) mapa.removeLayer(layer);
         });
@@ -160,8 +159,24 @@
           const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
           marker.bindPopup(`Parkomat: ${p.kod} / ${p.numer}`);
         });
-      }
+      
+        // Sprawdź, czy strefa jest wybrana
+        if (selectedStrefy.length > 0 && !selectedStrefy.includes(p.strefa)) {
+        console.log(`Pominięto parkomat ${p.numer} - strefa: ${p.strefa}`);
+        return; // Pomijamy marker spoza wybranych stref
+        }
 
+          if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
+          else if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
+
+        const marker = L.circleMarker([p.lat, p.lon], { 
+        radius: 8, 
+        color: kolor, 
+        fillOpacity: 0.8 
+        }).addTo(mapa);
+          marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
+        };
+      
       function showCurrentLocation() {
         if (!navigator.geolocation) return;
 
@@ -177,9 +192,9 @@
               fillOpacity: 0.8
             }).addTo(mapa).bindPopup("Twoja lokalizacja").openPopup();
           }
-        );
-      }
-
+        )};
+      
+      // Wyszukiwanie po numerze parkomatu
       document.getElementById('searchBtn').addEventListener('click', function () {
         const query = document.getElementById('searchInput').value.trim().toUpperCase();
         const found = parkomatyData.find(p => String(p.numer).toUpperCase() === query || String(p.kod).toUpperCase() === query);
@@ -190,7 +205,7 @@
           alert("Parkomat nie znaleziony.");
         }
       });
-
+      // Odświerzanie widoku i lokalizacji
       document.getElementById('refreshBtn').addEventListener('click', function () {
         loadDemontowane();
         showCurrentLocation();
