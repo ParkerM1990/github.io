@@ -78,31 +78,6 @@
 </div>
 
 <button id="refreshBtn">Odśwież</button>
-<!-- Przycisk Mapa Satelitarna -->
-<button id="satelliteBtn" style="
-  position: absolute;
-  bottom: 80px;
-  left: 10px;
-  z-index: 1001;
-  background: #28a745;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;">Mapa satelitarna</button>
-
-<!-- Przycisk Mapa Standardowa -->
-<button id="standardBtn" style="
-  position: absolute;
-  bottom: 45px;
-  left: 10px;
-  z-index: 1001;
-  background: #6c757d;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;">Mapa standardowa</button>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
@@ -113,27 +88,7 @@
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(mapa);
-const standardLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "&copy; OpenStreetMap contributors"
-});
-const satelliteLayer = L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
-  attribution: "&copy; OpenStreetMap contributors"
-});
-standardLayer.addTo(mapa);
-let currentLayer = standardLayer;
 
-// Obsługa przycisków zmiany mapy
-document.getElementById('satelliteBtn').addEventListener('click', function () {
-  mapa.removeLayer(currentLayer);
-  satelliteLayer.addTo(mapa);
-  currentLayer = satelliteLayer;
-});
-
-document.getElementById('standardBtn').addEventListener('click', function () {
-  mapa.removeLayer(currentLayer);
-  standardLayer.addTo(mapa);
-  currentLayer = standardLayer;
-});
     const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?output=xlsx';
     const linkDoCsv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
 
