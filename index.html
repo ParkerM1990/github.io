@@ -125,6 +125,10 @@
   font-weight: bold;
   padding-bottom: 10px;
 }
+.sidebar-title{display: inline-block;
+margin-left: 50px;}
+.sidebar-search{display: block;
+margin-top: 30px;}
 
 #sidebarClose {
   background: none;
@@ -158,10 +162,13 @@
 
 <div id="sidebar" class="closed">
   <div id="sidebarHeader">
-    <span>📍 Lista parkomatów</span>
+    <span class="sidebar-title">📍 Lista parkomatów</span>
     <button id="sidebarClose">×</button>
   </div>
-  <input type="text" id="sidebarSearch" placeholder="Szukaj po numerze..." />
+  <div class="sidebar-search">
+    <input type="text" id="sidebarSearch" placeholder="Szukaj po numerze..." />
+  </div>
+  
   <div id="sidebarContent"></div>
 </div>
 
