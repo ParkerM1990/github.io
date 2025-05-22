@@ -88,6 +88,7 @@
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(mapa);
+    watchLocation();
 
     const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?output=xlsx';
     const linkDoCsv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
@@ -128,7 +129,6 @@
           const data = XLSX.utils.sheet_to_json(sheet);
           fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
           updateMarkers();
-          watchLocation();
         });
     }
 
