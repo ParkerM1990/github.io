@@ -99,7 +99,8 @@
     let parkomatyData = [];
     let locationMarker = null;
     let markersMap = {}; // { ID: marker }
-
+    let zdemontowaneFoto = {}; // ID => link do zdjęcia z demontażu
+    let fundamentyFoto = {};   // ID => link do zdjęcia z fundamentu
     
 
 fetch(parkomatyXlsxUrl)
@@ -123,6 +124,7 @@ fetch(parkomatyXlsxUrl)
     loadDemontowane();
   });
 
+  
     function loadDemontowane() {
   Papa.parse(linkDoCsv, {
     download: true,
@@ -166,11 +168,11 @@ fetch(parkomatyXlsxUrl)
   const link2 = row['Zdjęcie parkomatu z numerem'];
 
         if (id) {
-          zdemontowaneId.push(id);
+          fundamentyId.push(id);
 
           if (link2 && link2.includes("open?id=")) {
             const imgId2 = link2.split("id=")[1];
-            zdemontowaneFoto[id] = `https://drive.google.com/uc?export=view&id=${imgId2}`;
+            fundamentyFoto[id] = `https://drive.google.com/uc?export=view&id=${imgId2}`;
           }
         }
       });
@@ -178,8 +180,7 @@ fetch(parkomatyXlsxUrl)
     });
 }
 
-let zdemontowaneFoto = {}; // ID => link do zdjęcia z demontażu
-let fundamentyFoto = {};   // ID => link do zdjęcia z fundamentu
+
 
     function updateStrefy(parkomaty) {
       const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
