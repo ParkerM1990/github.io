@@ -132,7 +132,7 @@ fetch(parkomatyXlsxUrl)
       zdemontowaneFoto = {};
       results.data.forEach(row => {
   const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
-  const link = row['Zdjęcie parkomaty z numerem'];
+  const link = row['Zdjęcie parkomatu z numerem'];
   if (id && link) {
     zdemontowaneFoto[id] = link.replace("open?", "uc?export=view&"); // konwersja linku
   }
@@ -155,7 +155,7 @@ fetch(parkomatyXlsxUrl)
       fundamentyFoto = {};
       data.forEach(row => {
   const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
-  const link = row['Zdjęcie parkomaty z numerem'];
+  const link = row['Zdjęcie parkomatu z numerem'];
   if (id && link) {
     fundamentyFoto[id] = link.replace("open?", "uc?export=view&");
   }
