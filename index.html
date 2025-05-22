@@ -219,8 +219,8 @@ fetch(parkomatyXlsxUrl)
     else if (isZdemontowany) kolor = 'red';
 
     // Zdjęcia (jeśli dostępne)
-    const fotoZdemontowany = zdemontowaneFoto[id] ? `<br><b>Demontaż:</b><br><img src="${zdemontowaneFoto[id]}" style="max-width: 200px;">` : '';
-    const fotoFundament = fundamentyFoto[id] ? `<br><b>Fundament:</b><br><img src="${fundamentyFoto[id]}" style="max-width: 200px;">` : '';
+    const fotoZdemontowany = zdemontowaneFoto[id] ? `<br><b>Demontaż:</b><br><img src="${zdemontowaneFoto[id]}" style="max-width: 200px;" referrerpolicy="no-referrer" crossorigin="anonymous">` : '';
+    const fotoFundament = fundamentyFoto[id] ? `<br><b>Fundament:</b><br><img src="${fundamentyFoto[id]}" style="max-width: 200px;" referrerpolicy="no-referrer" crossorigin="anonymous>` : '';
     const popup = `
       <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
       <b>Adres:</b> ${p.adres}<br/>
