@@ -130,14 +130,21 @@ fetch(parkomatyXlsxUrl)
     complete: function(results) {
       zdemontowaneId = [];
       zdemontowaneFoto = {};
+
       results.data.forEach(row => {
-  const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
-  const link = row['Zdjęcie parkomatu z numerem'];
-  if (id) { zdemontowaneId.push(id);
-    if (link) {
-    zdemontowaneFoto[id] = link.replace("open?", "uc?export=view&"); // konwersja linku
-  }}
-});
+        const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
+        const link1 = row['Zdjęcie parkomatu z numerem'];
+
+        if (id) {
+          zdemontowaneId.push(id);
+
+          if (link1 && link1.includes("open?id=")) {
+            const imgId = link1.split("id=")[1];
+            zdemontowaneFoto[id] = `https://drive.google.com/uc?export=view&id=${imgId}`;
+          }
+        }
+      });
+
       updateMarkers();
       loadFundamenty();
     }
@@ -156,12 +163,17 @@ fetch(parkomatyXlsxUrl)
       fundamentyFoto = {};
       data.forEach(row => {
   const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
-  const link = row['Zdjęcie parkomatu z numerem'];
-  if (id) { fundamentyId.push(id);
-    if (link){
-    fundamentyFoto[id] = link.replace("open?", "uc?export=view&");
-  }}
-});
+  const link2 = row['Zdjęcie parkomatu z numerem'];
+
+        if (id) {
+          zdemontowaneId.push(id);
+
+          if (link2 && link2.includes("open?id=")) {
+            const imgId2 = link2.split("id=")[1];
+            zdemontowaneFoto[id] = `https://drive.google.com/uc?export=view&id=${imgId2}`;
+          }
+        }
+      });
       updateMarkers();
     });
 }
