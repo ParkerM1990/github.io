@@ -99,14 +99,26 @@
     let locationMarker = null;
     let markersMap = {}; // { ID: marker }
 
-    fetch("parkomaty.json")
-      .then(res => res.json())
-      .then(parkomaty => {
-        parkomatyData = parkomaty;
-        updateStrefy(parkomaty);
-        updateMarkers();
-        loadDemontowane();
-      });
+    const parkomatyCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSFwA2SPG1zKGbpx5jDLiT6bBIS3RHvZwL4b_6WeI6bdTQCoe0FJR0Ydgqzpb0UtvS42ngSopzN5NxE/pub?output=xlsx";
+
+Papa.parse(parkomatyCsvUrl, {
+  download: true,
+  header: true,
+  complete: function(results) {
+    parkomatyData = results.data.map(row => ({
+      kod: (row['Kod'] || '').toUpperCase().trim(),
+      numer: (row['Numer'] || '').toUpperCase().trim(),
+      lon: parseFloat(row['X']) || 0,
+      lat: parseFloat(row['Y']) || 0,
+      adres: row['Adres'] || '',
+      strefa: row['Strefa'] || 'Brak'
+    }));
+
+    updateStrefy(parkomatyData);
+    updateMarkers();
+    loadDemontowane();
+  }
+});
 
     function loadDemontowane() {
       Papa.parse(linkDoCsv, {
