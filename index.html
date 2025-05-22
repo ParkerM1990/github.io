@@ -124,28 +124,50 @@ fetch(parkomatyXlsxUrl)
   });
 
     function loadDemontowane() {
-      Papa.parse(linkDoCsv, {
-        download: true,
-        header: true,
-        complete: function(results) {
-          zdemontowaneId = results.data.map(wpis => String(wpis['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
-          updateMarkers();
-          loadFundamenty();
+  Papa.parse(linkDoCsv, {
+    download: true,
+    header: true,
+    complete: function(results) {
+      zdemontowaneId = [];
+      zdemontowaneFoto = {};
+      results.data.forEach(row => {
+        const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim();
+        const foto = row['Zdjęcie parkomatu z numerem'] || row['Zdjęcie'] || '';
+        if (id) {
+          zdemontowaneId.push(id);
+          if (foto) zdemontowaneFoto[id] = foto;
         }
       });
+      updateMarkers();
+      loadFundamenty();
     }
+  });
+}
+
 
     function loadFundamenty() {
-      fetch(fundamentyUrl)
-        .then(res => res.arrayBuffer())
-        .then(buffer => {
-          const workbook = XLSX.read(buffer, { type: 'array' });
-          const sheet = workbook.Sheets[workbook.SheetNames[0]];
-          const data = XLSX.utils.sheet_to_json(sheet);
-          fundamentyId = data.map(row => String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim());
-          updateMarkers();
-        });
-    }
+  fetch(fundamentyUrl)
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const workbook = XLSX.read(buffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(sheet);
+      fundamentyId = [];
+      fundamentyFoto = {};
+      data.forEach(row => {
+        const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim();
+        const foto = row['Zdjęcie parkomatu z numerem'] || row['Zdjęcie'] || '';
+        if (id) {
+          fundamentyId.push(id);
+          if (foto) fundamentyFoto[id] = foto;
+        }
+      });
+      updateMarkers();
+    });
+}
+
+let zdemontowaneFoto = {}; // ID => link do zdjęcia z demontażu
+let fundamentyFoto = {};   // ID => link do zdjęcia z fundamentu
 
     function updateStrefy(parkomaty) {
       const strefy = [...new Set(parkomaty.map(p => p.strefa))].sort();
@@ -188,7 +210,32 @@ fetch(parkomatyXlsxUrl)
         color: kolor,
         fillOpacity: 0.8
       }).addTo(mapa);
-      marker.bindPopup(`<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}`);
+      let fotoHtml = '';
+const ids = [String(p.kod || '').toUpperCase(), String(p.numer || '').toUpperCase()];
+const id = ids.find(id => fundamentyFoto[id] || zdemontowaneFoto[id]);
+
+if (id) {
+  if (fundamentyFoto[id] && zdemontowaneFoto[id]) {
+    fotoHtml = `
+      <hr><b>Zdjęcie z demontażu:</b><br/>
+      <img src="${zdemontowaneFoto[id]}" alt="Foto demontaż" width="200"><br/>
+      <b>Zdjęcie fundamentu:</b><br/>
+      <img src="${fundamentyFoto[id]}" alt="Foto fundament" width="200">
+    `;
+  } else if (fundamentyFoto[id]) {
+    fotoHtml = `<hr><b>Zdjęcie fundamentu:</b><br/><img src="${fundamentyFoto[id]}" alt="Foto" width="200">`;
+  } else if (zdemontowaneFoto[id]) {
+    fotoHtml = `<hr><b>Zdjęcie z demontażu:</b><br/><img src="${zdemontowaneFoto[id]}" alt="Foto" width="200">`;
+  }
+}
+
+marker.bindPopup(`
+  <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
+  <b>Adres:</b> ${p.adres}<br/>
+  <b>Strefa:</b> ${p.strefa}
+  ${fotoHtml}
+`);
+
       markersMap[id] = marker;
     }
   });
