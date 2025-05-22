@@ -38,7 +38,7 @@
     .legend div span { width: 18px; height: 18px; margin-right: 5px; display: inline-block; }
     .leaflet-control-zoom {margin-top: 60px !important;}
 
-    #filter, #search {
+    #filter {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -137,9 +137,6 @@ margin-top: 30px;}
   cursor: pointer;
   color: #333;
 }
-    #search {
-      top: 10px;
-    }
   </style>
 </head>
 <body>
@@ -148,13 +145,6 @@ margin-top: 30px;}
 <div id="filter">
   <label>Wybierz strefy:</label><br/>
   <select id="strefaSelect" multiple size="5"></select>
-</div>
-
-<!-- Wyszukiwanie po środku strony -->
-<div id="search" style="left: 150px; transform: translateX(-50%); width: 170px;">
-  <label>Wyszukaj parkomat:</label><br/>
-  <input type="text" id="searchInput" placeholder="Wpisz numer parkomatu" style="width: 150px; padding: 4px; margin-right: 4px;">
-  <button id="searchBtn">Szukaj</button>
 </div>
 
 <div id="map"></div>
@@ -433,15 +423,6 @@ document.getElementById("sidebarSearch").addEventListener("input", function () {
   const query = this.value.trim().toUpperCase();
   createSidebar(parkomatyData, query);
 });
-    document.getElementById('searchBtn').addEventListener('click', function () {
-      const query = document.getElementById('searchInput').value.trim().toUpperCase();
-      const found = parkomatyData.find(p => String(p.numer).toUpperCase() === query || String(p.kod).toUpperCase() === query);
-      if (found) {
-        mapa.setView([found.lat, found.lon], 16);
-      } else {
-        alert("Parkomat nie znaleziony.");
-      }
-    });
 document.addEventListener("click", function (e) {
   const sidebar = document.getElementById("sidebar");
   const toggle = document.getElementById("sidebarToggle");
