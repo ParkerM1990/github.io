@@ -140,9 +140,9 @@ fetch(parkomatyXlsxUrl)
         if (id) {
           zdemontowaneId.push(id);
 
-          if (link1 && link1.includes("open?id=")) {
+          if (link1 && link1.includes("id=")) {
             const imgId = new URLSearchParams(link1.split("?")[1].get("id"));
-            zdemontowaneFoto[id] = `https://drive.google.com/uc?export=view&id=${imgId}&sz=w500`;
+            zdemontowaneFoto[id] = `https://drive.google.com/uc?export=view&id=${imgId}`;
           }
         }
       });
