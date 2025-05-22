@@ -110,12 +110,12 @@ fetch(parkomatyXlsxUrl)
     const data = XLSX.utils.sheet_to_json(sheet);
 
     parkomatyData = data.map(row => ({
-      kod: (row['Kod'] || '').toUpperCase().trim(),
-      numer: (row['Numer'] || '').toUpperCase().trim(),
+      kod: String(row['Kod'] || '').toUpperCase().trim(),
+      numer: String(row['Numer'] || '').toUpperCase().trim(),
       lon: parseFloat(row['X']) || 0,
       lat: parseFloat(row['Y']) || 0,
-      adres: row['Adres'] || '',
-      strefa: row['Strefa'] || 'Brak'
+      adres: String(row['Adres'] || '').trim(),
+      strefa: String(row['Strefa'] || 'Brak').trim()
     }));
 
     updateStrefy(parkomatyData);
