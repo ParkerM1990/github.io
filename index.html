@@ -102,11 +102,14 @@
 
     
 
-Papa.parse(parkomatyCsvUrl, {
-  download: true,
-  header: true,
-  complete: function(results) {
-    parkomatyData = results.data.map(row => ({
+fetch(parkomatyXlsxUrl)
+  .then(res => res.arrayBuffer())
+  .then(buffer => {
+    const workbook = XLSX.read(buffer, { type: 'array' });
+    const sheet = workbook.Sheets[workbook.SheetNames[0]];
+    const data = XLSX.utils.sheet_to_json(sheet);
+
+    parkomatyData = data.map(row => ({
       kod: (row['Kod'] || '').toUpperCase().trim(),
       numer: (row['Numer'] || '').toUpperCase().trim(),
       lon: parseFloat(row['X']) || 0,
@@ -118,8 +121,7 @@ Papa.parse(parkomatyCsvUrl, {
     updateStrefy(parkomatyData);
     updateMarkers();
     loadDemontowane();
-  }
-});
+  });
 
     function loadDemontowane() {
       Papa.parse(linkDoCsv, {
