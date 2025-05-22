@@ -131,13 +131,12 @@ fetch(parkomatyXlsxUrl)
       zdemontowaneId = [];
       zdemontowaneFoto = {};
       results.data.forEach(row => {
-        const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim();
-        const foto = row['Zdjęcie parkomatu z numerem'] || row['Zdjęcie'] || '';
-        if (id) {
-          zdemontowaneId.push(id);
-          if (foto) zdemontowaneFoto[id] = foto;
-        }
-      });
+  const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
+  const link = row['Zdjęcie parkomaty z numerem'];
+  if (id && link) {
+    zdemontowaneFoto[id] = link.replace("open?", "uc?export=view&"); // konwersja linku
+  }
+});
       updateMarkers();
       loadFundamenty();
     }
@@ -155,13 +154,12 @@ fetch(parkomatyXlsxUrl)
       fundamentyId = [];
       fundamentyFoto = {};
       data.forEach(row => {
-        const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']).toUpperCase().trim();
-        const foto = row['Zdjęcie parkomatu z numerem'] || row['Zdjęcie'] || '';
-        if (id) {
-          fundamentyId.push(id);
-          if (foto) fundamentyFoto[id] = foto;
-        }
-      });
+  const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
+  const link = row['Zdjęcie parkomaty z numerem'];
+  if (id && link) {
+    fundamentyFoto[id] = link.replace("open?", "uc?export=view&");
+  }
+});
       updateMarkers();
     });
 }
@@ -199,43 +197,33 @@ let fundamentyFoto = {};   // ID => link do zdjęcia z fundamentu
 
     const idy = [String(p.kod || '').toUpperCase(), String(p.numer || '').toUpperCase()];
     let kolor = 'green';
-    if (idy.some(id => fundamentyId.includes(id))) kolor = 'black';
-    else if (idy.some(id => zdemontowaneId.includes(id))) kolor = 'red';
+
+    const isFundament = idy.some(id => fundamentyId.includes(id));
+    const isZdemontowany = idy.some(id => zdemontowaneId.includes(id));
+    if (isFundament) kolor = 'black';
+    else if (isZdemontowany) kolor = 'red';
+
+    // Zdjęcia (jeśli dostępne)
+    const fotoZdemontowany = zdemontowaneFoto[id] ? `<br><b>Demontaż:</b><br><img src="${zdemontowaneFoto[id]}" style="max-width: 200px;">` : '';
+    const fotoFundament = fundamentyFoto[id] ? `<br><b>Fundament:</b><br><img src="${fundamentyFoto[id]}" style="max-width: 200px;">` : '';
+    const popup = `
+      <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
+      <b>Adres:</b> ${p.adres}<br/>
+      <b>Strefa:</b> ${p.strefa}
+      ${fotoZdemontowany}
+      ${fotoFundament}
+    `;
 
     if (markersMap[id]) {
       markersMap[id].setStyle({ color: kolor });
+      markersMap[id].bindPopup(popup);
     } else {
       const marker = L.circleMarker([p.lat, p.lon], {
         radius: 8,
         color: kolor,
         fillOpacity: 0.8
       }).addTo(mapa);
-      let fotoHtml = '';
-const ids = [String(p.kod || '').toUpperCase(), String(p.numer || '').toUpperCase()];
-const id = ids.find(id => fundamentyFoto[id] || zdemontowaneFoto[id]);
-
-if (id) {
-  if (fundamentyFoto[id] && zdemontowaneFoto[id]) {
-    fotoHtml = `
-      <hr><b>Zdjęcie z demontażu:</b><br/>
-      <img src="${zdemontowaneFoto[id]}" alt="Foto demontaż" width="200"><br/>
-      <b>Zdjęcie fundamentu:</b><br/>
-      <img src="${fundamentyFoto[id]}" alt="Foto fundament" width="200">
-    `;
-  } else if (fundamentyFoto[id]) {
-    fotoHtml = `<hr><b>Zdjęcie fundamentu:</b><br/><img src="${fundamentyFoto[id]}" alt="Foto" width="200">`;
-  } else if (zdemontowaneFoto[id]) {
-    fotoHtml = `<hr><b>Zdjęcie z demontażu:</b><br/><img src="${zdemontowaneFoto[id]}" alt="Foto" width="200">`;
-  }
-}
-
-marker.bindPopup(`
-  <b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
-  <b>Adres:</b> ${p.adres}<br/>
-  <b>Strefa:</b> ${p.strefa}
-  ${fotoHtml}
-`);
-
+      marker.bindPopup(popup);
       markersMap[id] = marker;
     }
   });
