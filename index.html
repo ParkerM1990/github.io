@@ -203,8 +203,9 @@ Papa.parse(parkomatyCsvUrl, {
     parkomatyData = data.map(row => ({
       kod: String(row['Kod'] || '').toUpperCase().trim(),
       numer: String(row['Numer'] || '').toUpperCase().trim(),
-      lon: parseFloat(row['X']) || 0,
-      lat: parseFloat(row['Y']) || 0,
+      // Zamiana przecinka na kropkę przed konwersją na float
+      lon: parseFloat((row['X'] || '0').replace(',', '.')),
+      lat: parseFloat((row['Y'] || '0').replace(',', '.')),
       adres: String(row['Adres'] || '').trim(),
       strefa: String(row['Strefa'] || 'Brak').trim()
     }));
