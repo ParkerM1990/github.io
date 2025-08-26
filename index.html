@@ -194,12 +194,11 @@ margin-top: 30px;}
     let fundamentyFoto = {};   // ID => link do zdjęcia z fundamentu
     
 
-fetch(parkomatyXlsxUrl)
-  .then(res => res.arrayBuffer())
-  .then(buffer => {
-    const workbook = XLSX.read(buffer, { type: 'array' });
-    const sheet = workbook.Sheets[workbook.SheetNames[0]];
-    const data = XLSX.utils.sheet_to_json(sheet);
+Papa.parse(parkomatyXlsxUrl, {
+  download: true,
+  header: true,
+  complete: function(results) {
+    const data = results.data;
 
     parkomatyData = data.map(row => ({
       kod: String(row['Kod'] || '').toUpperCase().trim(),
@@ -214,7 +213,8 @@ fetch(parkomatyXlsxUrl)
     updateMarkers();
     createSidebar(parkomatyData);
     loadDemontowane();
-  });
+  }
+});
 
   
     function loadDemontowane() {
@@ -247,17 +247,16 @@ fetch(parkomatyXlsxUrl)
 
 
     function loadFundamenty() {
-  fetch(fundamentyUrl)
-    .then(res => res.arrayBuffer())
-    .then(buffer => {
-      const workbook = XLSX.read(buffer, { type: 'array' });
-      const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const data = XLSX.utils.sheet_to_json(sheet);
+  Papa.parse(fundamentyUrl, {
+    download: true,
+    header: true,
+    complete: function(results) {
       fundamentyId = [];
       fundamentyFoto = {};
-      data.forEach(row => {
-  const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
-  const link2 = row['Zdjęcie parkomatu z numerem'];
+
+      results.data.forEach(row => {
+        const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123'] || '').toUpperCase().trim();
+        const link2 = row['Zdjęcie parkomatu z numerem'];
 
         if (id) {
           fundamentyId.push(id);
@@ -268,8 +267,10 @@ fetch(parkomatyXlsxUrl)
           }
         }
       });
+
       updateMarkers();
-    });
+    }
+  });
 }
 
 
