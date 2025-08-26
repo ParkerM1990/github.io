@@ -1,1085 +1,372 @@
-Kod;Numer;X;Y;Adres;Strefa;stan; ;;;;;;;;;;;;;;;;;;;
-A010316;1010316;21.016800615524;52.234440065375;ul. Tuwima/G髍skiego 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A010318;1010318;21.016199447557;52.234904418475;ul. Baczy駍kiego 4;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-A030115;1030115;21.007911887877;52.23667515067;ul. Marsza砶owska 140;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030216;1030216;21.010149176687;52.236881337901;pl. D筨rowskiego 2-4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070226;1070226;21.012557766399;52.24185838492;pl. Pi硈udskiego 1;0;brak;0;;;;;;;;;;;;;;;;;;;
-A070306;1070306;21.012856459721;52.243401168501;ul. Tr阞acka 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070310;1070310;21.013765553642;52.24340765325;ul. Tr阞acka 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110110;1110110;21.002199328374;52.237370484621;ul. Grzybowska 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110210;1110210;21.003873188396;52.236332608578;pl. Grzybowski 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110214;1110214;21.004190792678;52.235813505135;pl. Grzybowski 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110308;1110308;21.001548912297;52.234680894387;ul. Emilii Plater 55;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110312;1110312;20.998543881409;52.23407781581;ul. Twarda 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A150119;1150119;21.002006919389;52.241804727822;ul. Elektoralna 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A150126;1150126;20.999816598811;52.243730921755;al. Solidarno渃i 83;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A150130;1150130;20.999018917645;52.243830116387;al. Solidarno渃i 72;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A150213;1150213;20.996867867957;52.239907415922;ul. Elektoralna 21-23;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-A150218;1150218;21.000001412472;52.239731704827;pl. Mirowski-Zimna;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050213;2050213;21.021206748526;52.221599671161;al. R罂-Koszykowa;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B050214;2050214;21.021334007346;52.221229673404;ul. Koszykowa 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050218;2050218;21.022141132322;52.2203671849;ul. S硊縠wska 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050226;2050226;21.020573552354;52.221229200005;ul. Natoli駍ka 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050227;2050227;21.019996538072;52.220871247279;ul. Natoli駍ka 3;wystaje kwadrat;brak;wystaje kwadrat;;;;;;;;;;;;;;;;;;;
-B050301;2050301;21.016229657715;52.219842372926;ul. Nowowiejska 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050306;2050306;21.017013598086;52.218689668481;ul. Mokotowska 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050313;2050313;21.018968056502;52.219774845445;al. Wyzwolenia 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050325;2050325;21.019948005718;52.218698356929;ul. Sempo硂wskiej 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060227;2060227;21.020641135041;52.235686242462;ul. Kopernika - Ordynacka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060325;2060325;21.01863865822;52.238425041968;pl. Osterwy 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060332;2060332;21.017559756031;52.242647850728;ul. Karowa 18;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060334;2060334;21.014603269166;52.244915709224;ul. Krakowskie Przedmie渃ie 62;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B140103;2140103;21.0000857;52.2261028;ul. Nowogrodzka v-vis 64;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B140107;2140107;20.998698085822;52.22573434935;ul. Nowogrodzka v-vis 66;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B140109;2140109;20.997519784893;52.225476494681;ul. Nowogrodzka v-vis 68;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B160105;2160105;21.0044903;52.2203877;al. Niepodleg硂渃i 235;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B160111;2160111;21.008406462985;52.222479981802;ul. Noakowskiego (Skwer);jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B160125;2160125;21.010469417877;52.219897543612;ul. Nowowiejska 25;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B160205;2160205;21.010337513503;52.221359879703;ul. Noakowskiego 12;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-B160213;2160213;21.0122803;52.2211694;ul. Lwowska 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B160218;2160218;21.0129874263;52.220360632393;ul. 宯iadeckich 21;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B160226;2160226;21.014839301237;52.220007228598;ul. Nowowiejska 10;stoi na starym adapter;brak;stoi na starym adapter;;;;;;;;;;;;;;;;;;;
-B160228;2160228;21.013197796448;52.220017895067;ul. Nowowiejska 12-18;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210103;2210103;20.991059108659;52.241387534506;al. Solidarno渃i 84;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210125;2210125;20.9883695;52.240349;al. Solidarno渃i 88;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210202;2210202;20.994903409275;52.239304141362;ul. Elektoralna 24;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210211;2210211;20.992862074029;52.238027291799;ul. Ch硂dna (park);wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B210302;2210302;20.995513881838;52.236737287197;ul. Ciep砤;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210304;2210304;20.992139747337;52.235373674471;ul. Walic體 13;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210309;2210309;20.990102749397;52.235578635231;ul. 痚lazna 67;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210314;2210314;20.994979945164;52.233923910629;ul. Pereca 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210319;2210319;20.995951627372;52.235475763719;ul. Ciep砤 - Grzybowska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210324;2210324;20.990578660507;52.234794546841;ul. 痚lazna 63;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220101;2220101;20.993473779793;52.231455848736;ul. Pa駍ka 65;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220209;2220209;20.9997755;52.2274492;Al. Jerozolimskie v-v 87;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-B220210;2220210;20.998514925805;52.227249057917;Al. Jerozolimskie 56c;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220214;2220214;20.995368619606;52.229253604863;ul. Z硂ta 79;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220216;2220216;20.997233551926;52.229685414078;ul. Z硂ta 69;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C120101;3120101;21.019780075917;52.214654303922;ul. Polna 3;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-C120219;3120219;21.023077022625;52.213573775313;ul. Bagatela 11;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-C130109;3130109;21.021956318257;52.211656914413;ul. Skolimowska 3;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-C130211;3130211;21.020935098886;52.207272889773;ul. Narbutta 4;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-C130309;3130309;21.023569236757;52.208888351155;ul. Chocimska 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C190103;3190103;20.985497548511;52.221587007814;ul. Gr骿ecka 22-24;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C190120;3190120;20.980740026016;52.220090611681;ul. Kaliska 13;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C190129;3190129;20.98339901376;52.220430272241;ul. Poniecka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C200105;3200105;21.022804365558;52.204025189524;ul. Pu砤wska 40;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-C200114;3200114;21.020292258284;52.202024353569;ul. Ba硊ckiego 27;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-C200203;3200203;21.020851390756;52.201077255878;ul. Ba硊ckiego 19;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-C200207;3200207;21.023146707767;52.201533072425;ul. Pu砤wska 54-56;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-D230002;4230002;20.992791125067;52.2255682384;Al. Jerozolimskie 113-117;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-D230003;4230003;20.993733392772;52.225645116101;Al. Jerozolimskie 113-117 Parking;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-D230012;4230012;20.994207617907;52.223523560748;ul. Koszykowa v-v 86;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E040202;5040202;21.008071457474145;52.22893464111643;Al. Jerozolimskie 53;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E040228;5040228;21.007171251364;52.228664524819;Al. Jerozolimskie 57;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-E090210;5090210;21.009024614349;52.249488207641;ul. Kili駍kiego;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E090212;5090212;21.009548525674;52.248781133418;ul. Podwale 17;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E090217;5090217;21.011223439722;52.247904383699;ul. Podwale;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E090219;5090219;21.011742863364;52.247534646686;ul. Podwale 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100102;5100102;20.99991939247;52.231516473629;ul. Sienna - Jana Paw砤;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100105;5100105;21.001811563011;52.232113106519;ul. 宭iska 3;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E100106;5100106;21.001595694658;52.232503015721;ul. 宭iska (Apteka);wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E100107;5100107;21.000876419781;52.232225892487;ul. 宭iska 8;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100108;5100108;21.000109928671;52.232184570062;ul. 宭iska 10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100109;5100109;21.002756026459;52.232290901483;ul. Sosnowa - Sienna;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E100110;5100110;21.0004296;52.2330531;ul. Pa駍ka 7;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100111;5100111;21.001256885487;52.233182327018;ul. Pa駍ka 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100212;5100212;21.0088753;52.229336;Al. Jerozolimskie;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E100302;5100302;21.0043646;52.2289211;ul. Emilii Plater Dw. Centralny;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100303;5100303;21.004171936451;52.229281955607;ul. Emilii Plater Dw. Centralny;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100306;5100306;21.001091151219;52.230644761966;ul. Z硂ta 48/54;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E100309;5100309;21.003008498635;52.231032573494;ul. Z硂ta 44;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100310;5100310;21.004943111223;52.229074020202;ul. Emilii Plater Dw. Centralny;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240002;5240002;21.006132440472;52.259913610256;ul. S硂mi駍kiego rej. Mostu Gd;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E240006;5240006;21.00332145;52.25510502;ul. Konwiktorska 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240011;5240011;21.009114378479;52.25617232997;ul. Sanguszki 35;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240032;5240032;21.009099801864;52.254078623783;ul. Ko渃ielna Ko渃i蟪;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240068;5240068;21.003439995492;52.250473666528;ul. Bonifraterska rej. 寃i阾oj;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E240119;5240119;21.026030224755;52.239523498897;ul. Drewniana 7;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E240179;5240179;21.034038373727;52.229299610625;ul. Czerniakowska - Park 1;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E240239;5240239;21.035922502668;52.222912077986;ul. Przemys硂wa 38;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240265;5240265;21.007990671109;52.255092777076;ul. Przyrynek 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240294;5240294;21.035124837309;52.224912183128;ul. G髍no渓箂ka 29;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F170310;6170310;20.986833013594;52.218164717952;ul. Mochnackiego 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F170322;6170322;20.9925329;52.2189909;ul. Filtrowa 67;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F170323;6170323;20.9927283;52.2185685;ul. Warszewickiego 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F170408;6170408;20.9980453;52.2188376;ul. Filtrowa 59;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250104;6250104;20.98762905738;52.230375861438;ul. Pa駍ka vis-vis 101;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250105;6250105;20.988736201557;52.230465003262;ul. Pa駍ka 97;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250113;6250113;20.992278568942;52.229914359641;ul. Sienna 87;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250119;6250119;20.990149933572;52.227581426511;ul. Srebrna 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250130;6250130;20.993415619613;52.228445980712;ul. Twarda 51;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250208;6250208;20.987364476133;52.238287346964;ul. Ogrodowa 39-41;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250218;6250218;20.98497923113;52.235645487377;ul. Wronia/Krochmalna;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250231;6250231;20.991133191525;52.232860646986;ul. cka 1-3-5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250235;6250235;20.988075528711;52.236852740184;ul. Ch硂dna 29;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250313;6250313;20.9854889;52.2443414;Skwer Apfelbauma;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-F250326;6250326;20.9865104;52.2430754;ul. Nowolipki 25;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250347;6250347;20.986589048877;52.240189145348;ul. 痚lazna - al. Solidarno渃i 92;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250511;6250511;20.996677441461;52.253750778385;ul. Stawki 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250701;6250701;20.996482277029;52.248946883955;ul. Anielewicza 3-5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-G010211;7010211;21.0158818;52.2314709;ul. Krucza 51b;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-G020201;7020201;21.0170473;52.2307614;Al. Jerozolimskie 17;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-G020209;7020209;21.0202775;52.2306297;ul. Mysia 2;stoi na starym;brak;stoi na starym;;;;;;;;;;;;;;;;;;;
-G020323;7020323;21.0173283;52.2252844;ul. Wilcza 26;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-G040706;7040706;21.0131969;52.2244153;ul. Wilcza 44;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-G050224;7050224;21.0198847;52.2219958;ul. Koszykowa 20;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-G050229;7050229;21.022371552569;52.223735984711;ul. Pi阫na 3a;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-G100225;7100225;21.0092416;52.2320503;ul. Marsza砶owska Pl.Defilad;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-M040213;13040213;21.01289615;52.20746077;ul. Kazimierzowska 79;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-M040237;13040237;21.015689942293;52.204314841988;ul. A. J. Madali駍kiego 31/33;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-M040317;13040317;21.00708454;52.20664447;ul. Asfaltowa 15;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-M040342;13040342;21.004252096872;52.201284117055;ul. M. Kar硂wicza 12;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-W260119;21260119;20.95897634;52.22322219;al. Prymasa Tysiaclecia 46;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-W260210;21260210;20.96722455;52.23355085;ul. Wolska / Skierniewicka 21;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-W260403;21260403;20.95611402;52.23502424;al. Prymasa Tysiaclecia 62;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050257;16050257;20.98181498;52.21668689;ul. Gr骿ecka 43;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040104;15040104;21.02328812;52.20958571;ul. Chocimska 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050255;16050255;20.98379215;52.21710565;ul. M. Mochnackiego 10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050251;16050251;20.98545147;52.21735722;ul. M. Mochnackiego 8;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050236;16050236;20.98592726;52.21893242;ul. Akademicka / Filtrowa 83;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15101805;15101805;21.02099426;52.21220158;ul. Pu砤wska 5;adapter;brak;adapter;;;;;;;;;;;;;;;;;;;
-16050232;16050232;20.9868552;52.21916977;ul. Filtrowa 81;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050233;16050233;20.9876892;52.21912224;ul. Filtrowa 79;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15101801;15101801;21.02144351;52.21296989;ul. Pu砤wska 1A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050332;16050332;20.99676958;52.2184473;ul. Orzechowska 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050237;16050237;20.98911546;52.21877365;ul. Raszy駍ka / Filtrowa 75;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15101804;15101804;21.02284232;52.21252364;ul. Klonowa vis-a-vis 16;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050253;16050253;20.98942946;52.21729256;ul. M. Reja 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050335;16050335;21.00317546;52.21817008;ul. Langiewicza 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101817;11101817;21.02236538;52.21309342;ul. Klonowa 20;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050322;16050322;21.00024102;52.22154208;ul. Krzywickiego 34;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050217;16050217;20.98675746;52.22229389;ul. Gr骿ecka 17;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050320;16050320;21.00016597;52.22240776;ul. Krzywickiego vis-a-vis 34;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040234;15040234;21.02007213;52.20446863;ul. Olesi駍ka 10A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050321;16050321;21.00454203;52.22243133;al. Niepodleg硂渃i 245;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040129;15040129;21.02155609;52.2052644;ul. Madali駍kiego 3/5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040156;15040156;21.02337108;52.20075933;ul. Pu砤wska 62/64;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050309;16050309;20.99581348;52.22506671;pl. Starynkiewicza / Nowogrodzka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050204;16050204;20.99015201;52.22475637;Al. Jerozolimskie 125/127;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040146;15040146;21.02353905;52.20351401;ul. Pu砤wska / Morskie Oko;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050203;16050203;20.99565299;52.225786;pl. Starynkiewicza 7/9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040147;15040147;21.02230031;52.20273776;ul. D筨rowskiego vis-a-vis 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040145;15040145;21.02295112;52.20345643;ul. Pu砤wska / R罂ana 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040136;15040136;21.02336843;52.20439084;ul. Pu砤wska 53;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170933;17170933;20.99185442;52.22759897;Skwer Chrobry II;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050144;16050144;20.98248712;52.21887913;ul. Barska 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170925;17170925;20.99294714;52.22841121;ul. Twarda 60;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050150;16050150;20.9813009;52.21688152;ul. Gr骿ecka 46/50;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101736;11101736;21.04416741;52.21604046;ul. Szwole縠r體 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170906;17170906;20.99798921;52.23109837;ul. Sienna 59;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101811;11101811;21.02230957;52.21448236;al. J. C.Szucha 2/4;adapter;brak;adapter;;;;;;;;;;;;;;;;;;;
-11101803;11101803;21.02372623;52.21695989;al. Szucha 16;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101712;11101712;21.0394243;52.22570967;ul. G髍no渓箂ka 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101329;11101329;21.02544693;52.22396709;ul. Pi阫na 1a;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101808;11101808;21.02276986;52.21577288;al. J.C. Szucha 13/15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101614;11101614;21.02027566;52.221735;ul. Koszykowa 5/27;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101628;11101628;21.02148054;52.21984583;al. Wyzwolenia 10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101504;11101504;21.00907323;52.22220263;ul. Noakowskiego 24;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101634;11101634;21.01729693;52.21915257;ul. Mokotowska 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101705;11101705;21.0382537;52.22704104;ul. Czerniakowska 203;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101637;11101637;21.01694865;52.21828901;ul. Mokotowska 4/6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101511;11101511;21.01234761;52.2206758;ul. Lwowska 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101508;11101508;21.014592;52.22118016;ul. 宯iadeckich 1/15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040215;15040215;21.01801274;52.2076278;ul. T. Rejtana 14A;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-15040109;15040109;21.02121046;52.20882567;ul. Olszewska 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-15040123;15040123;21.02198768;52.20694944;ul. Pu砤wska 24;Wyci阾e szpilki;brak;Wyci阾e szpilki;;;;;;;;;;;;;;;;;;;
-11101725;11101725;21.03512386;52.22335784;ul. Rozbrat;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170315;17170315;20.97916961;52.2253657;ul. Kolejowa 37/39;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050149;16050149;20.98135036;52.21782509;ul. Kaliska 8/10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050147;16050147;20.98100847;52.21812191;ul. W阦ierska - Kaliska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101401;11101401;21.03649692;52.23664896;ul. Wybrze縠 Ko渃iuszkowskie;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101430;11101430;21.03128557;52.22963289;ul. Rozbrat;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101402;11101402;21.0351149;52.23591192;ul. Wyb. Ko渃iuszk. 17;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050135;16050135;20.97399967;52.219782;ul. Szcz隃liwicka 4;0;brak;0;;;;;;;;;;;;;;;;;;;
-17170415;17170415;20.95941217;52.22881705;J. Bema 70;wystaje kwadrat;brak;wystaje kwadrat;;;;;;;;;;;;;;;;;;;
-11101405;11101405;21.03427373;52.2352968;ul Potockiego 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050119;16050119;20.97618345;52.22118942;Al. Jerozolimskie 153;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101410;11101410;21.03641495;52.23448003;ul. Wio渓arska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101409;11101409;21.03511239;52.23448003;al. 3 Maja 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170267;17170267;20.97799386;52.23077438;ul. Karolkowa 28;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170237;17170237;20.97117333;52.23587445;ul. S. Staszica;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170272;17170272;20.97820563;52.22995755;ul. Karolkowa / Hrubieszowska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050126;16050126;20.98470198;52.22068836;ul. Gr骿ecka 28/30;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170248;17170248;20.97073435;52.23454396;ul. Wolska 40;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050132;16050132;20.98431872;52.22030446;ul. Gr骿ecka 32;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170252;17170252;20.96877362;52.23409942;ul. Wolska 50A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170814;17170814;20.9840117;52.23612762;ul. Ch硂dna 52;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170247;17170247;20.9674773;52.23453427;ul. Dzia砫owska 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050151;16050151;20.98410901;52.22191424;ul. Spiska 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050108;16050108;20.9833995;52.22280791;ul. Spiska / Al. Jerozolimskie 135;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101709;11101709;21.03645987;52.22625443;ul. Ko焟i駍ka 18;adapter;brak;adapter;;;;;;;;;;;;;;;;;;;
-16050102;16050102;20.98491166;52.22363468;Al. Jerozolimskie 133;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170414;17170414;20.95893747;52.22275093;al. Prymasa Tysi筩lecia 44;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170536;17170536;20.96431346;52.23338824;ul. Wolska 64;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050239;16050239;20.99094533;52.21858372;ul. Sz. Zimorowicza 7;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101427;11101427;21.03164489;52.23010607;ul. Ludna / Czerniakowska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170535;17170535;20.96282909;52.23315135;ul. Wolska 68/72;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050245;16050245;20.99145662;52.21813437;ul. J. Dantyszka / Sz. Zimorowica 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170531;17170531;20.96018144;52.23438516;ul. Soko硂wska 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170403;17170403;20.95551221;52.23062624;ul. Wolska 105/107;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101423;11101423;21.03272287;52.23084885;ul. Or硂wicza 10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170529;17170529;20.95976791;52.23569438;ul. Soko硂wska 10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050244;16050244;20.98989336;52.21819165;ul. J. Dantyszka 20;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170522;17170522;20.96523945;52.23771709;ul. P硂cka 41;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050228;16050228;20.98992468;52.22041988;ul. Raszy駍ka / J. U. Niemcewicza 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050216;16050216;20.9873536;52.22248187;ul. Daleka / Gr骿ecka 17;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170224;17170224;20.96835277;52.23786776;ul. E. Tyszkiewicza 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050215;16050215;20.98970938;52.22257699;ul. Raszy駍ka 14;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170221;17170221;20.96796881;52.23868077;ul. 痽tnia / E. Tyszkiewicza;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-11101426;11101426;21.03974996;52.23045959;ul. Wilanowska 5;adapter;brak;adapter;;;;;;;;;;;;;;;;;;;
-11101428;11101428;21.03864423;52.22990234;ul. Wilanowska / al. Zgrup. AK;adapter;brak;adapter;;;;;;;;;;;;;;;;;;;
-16050201;16050201;20.99152924;52.22570013;Al. Jerozolimskie PKP Ochota;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11101433;11101433;21.0364902;52.22882274;ul. Wilanowska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170265;17170265;20.98065127;52.23141311;ul. Przyokopowa;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170216;17170216;20.96740879;52.23961763;ul. E. Tyszkiewicza 13;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170258;17170258;20.98043469;52.23245121;ul. Przyokopowa;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170251;17170251;20.97730485;52.23403353;ul. Jaktorowska / Karolkowa;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170223;17170223;20.97814895;52.23842737;ul. Okopowa / Leszno;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170234;17170234;20.97965441;52.23654988;"Al. ""Solidarno渃i"" / Okopowa";jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170820;17170820;20.98971298;52.23442501;ul. Grzybowska 47;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170722;17170722;20.99040329;52.23540474;ul. 痚lazna 58/62;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170719;17170719;20.99007605;52.23629132;ul. Krochmalna 46;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050302;16050302;20.99997519;52.22716749;Al. Jerozolimskie 87;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170716;17170716;20.99155239;52.23701439;ul. Walic體;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170730;17170730;20.99724473;52.23371414;ul. Ciep砤 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170528;17170528;20.96519235;52.23587122;ul. P硂cka 37;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-17170250;17170250;20.97059057;52.23423216;ul. Wolska 41;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-16050313;16050313;21.00073284;52.22424002;ul. Oczki 1A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-11100501;E240062;21.00155962;52.24944222;ul. 寃i阾ojerska;0;brak;0;;;;;;;;;;;;;;;;;;;
-E240126;11101020;21.0315102;52.23869722;ul. Wybrze縠 Ko渃iuszkowskie 39;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250333;17170617;20.98752673;52.24297054;ul. Smocza;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240142;11101029;21.0309532;52.23714271;ul. Smulikowskiego;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240139;11101023;21.03008182;52.23818243;ul. J. Smulikowskiego 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250416;17170129;20.98488703;52.24673836;ul. Smocza 18;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240144;11101030;21.02990217;52.23701068;ul. Dobra 11;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240127;11100913;21.02427872;52.23808891;ul. Zaj阠za;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240129;11100920;21.02457515;52.23736826;ul. Cicha 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-W260508;17170218;20.9751804;52.23917661;ul. Karolkowa 63;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240131;11101026;21.02759873;52.2378439;ul. Tamka 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240274;11100926;21.02793485;52.2358389;ul. L. Kruczkowskiego;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240275;11101036;21.02839299;52.23579489;ul. L. Kruczkowskiego 12B;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240163;11101412;21.03307321;52.23406741;al. 3 Maja 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250404;17170117;20.98451504;52.25087002;ul. Stawki;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C120105;11101804;21.01731328;52.21656804;ul. Polna 24;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240159;11101408;21.03273185;52.23445253;al. 3 Maja 12;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080114;11101305;21.02125138;52.23142106;ul. Nowy 寃iat / Al. Jerozolimskie;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C120203;11101807;21.0206213;52.21553743;ul. Marsza砶owska 10/16;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080118;11101303;21.02485732;52.23245817;Al. Jerozolimskie;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C120204;11101805;21.02013438;52.21636865;ul. Marsza砶owska 20/22;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060113;11100942;21.02469478;52.23274942;Al. Jerozolimskie 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050310;11101636;21.01895166;52.21836693;ul. Marsza砶owska 28;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060102;11100943;21.02240157;52.23263012;ul. Smolna 23;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B050114;11101623;21.01750399;52.22083742;ul. Marsza砶owska 34/50;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240115;11101014;21.02499022;52.24039305;ul. Leszczy駍ka 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A010306;11100827;21.01683589;52.23614045;ul. Kubusia Puchatka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A010307;11100829;21.01686767;52.23575697;ul. Kubusia Puchatka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250604;11100131;20.98728678;52.25102761;ul. Niska 12;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A010322;11100848;21.01523693;52.23358222;ul. W. G髍skiego 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240083;11100349;21.01902357;52.24446425;ul. Furma駍ka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210218;17170718;20.98952607;52.23681134;ul. 痚lazna 68;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240078;11100342;21.01885288;52.2453718;ul. Bednarska 10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220212;17170927;20.99465475;52.22828043;ul. 痚lazna 27;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220126;17170916;20.9938078;52.22997015;ul. 痚lazna 28/30;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250726;11100423;20.99313692;52.2428061;Al. Jana Paw砤 II 46/48;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030402;11100807;21.01474979;52.23896031;ul. Traugutta 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030401;11100806;21.01599376;52.23918056;ul. Traugutta 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030301;11100801;21.01478622;52.24049293;ul. Kr髄ewska 1/7;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070114;11100534;21.00401194;52.24311892;ul. Senatorska 38;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070321;11100543;21.01525094;52.24167821;ul. Gen. M. Tokarzewskiego - Karasz.;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070118;11100536;21.00565447;52.24295057;ul. Senatorska 31;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070323;11100541;21.01439445;52.2421919;ul. Ossoli駍kich 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070109;11100530;21.00646009;52.24347605;ul. Senatorska 22;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A070119;11100531;21.00691082;52.24346508;ul. Senatorska / Canaletta;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A150220;11100616;21.00151096;52.23996322;ul. Ptasia 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E090209;11100326;21.00863047;52.24952243;ul. Kili駍kiego 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A150101;11100613;20.99888644;52.24073264;ul. Elektoralna 8/10;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E090203;11100325;21.00737912;52.24950671;ul. D硊ga 9;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B090114;11100502;21.00563925;52.24831409;ul. D硊ga 24;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110122;11100708;21.00227611;52.23545935;ul. Twarda 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110217;11100709;21.0023381;52.23519946;ul. Twarda 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110219;11100710;21.00431151;52.23500362;ul. R. Wallenberga;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110229;11100707;21.00536033;52.23568715;ul. Bagno 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100222;11100726;21.00295933;52.23249709;ul. E. Plater 49;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240069;11100317;21.00338434;52.25100536;ul. Bonifraterska 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100207;11100731;21.00328165;52.23142027;ul. Emilii Plater 47;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220115;17170907;20.99932396;52.23116098;al. Jana Paw砤 II(;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240074;11100319;21.00470028;52.25080027;ul. Nowiniarska 8;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-P270218;13070209;21.04545733;52.26014506;ul. Wile駍ka 63;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-C180217;13070730;21.03847675;52.25067412;ul. K阷na 8;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-A070324;11100337;21.01193153;52.24597383;ul. Senatorska 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240048;11100332;21.01692877;52.24697309;ul. Nowy Zjazd;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240018;11100216;21.00134547;52.25354654;ul. W. Dola駍kiego 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250520;11100128;20.98617036;52.25129022;ul. Stawki 14;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C180120;13070708;21.03224149;52.25210198;ul. Floria駍ka 8;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-E240058;11100223;20.99996106;52.2516151;ul. Wa硂wa 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240104;11101009;21.02328602;52.2415513;ul. Lipowa;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240049;11100311;21.01256027;52.25217414;ul. Bole滄 / Rybaki;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060320;11100909;21.01938289;52.23861152;ul. K. Karasia 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240017;11100218;21.00063723;52.25321255;ul. Bonifraterska 10c;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240051;11100313;21.01187192;52.25174985;ul. Bugaj / Mostowa;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060309;11100917;21.02046258;52.23779441;ul. J. Bartoszewicza 11;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060217;11100937;21.02150291;52.23395738;ul. M. Kopernika / Foksal;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060212;11100934;21.0221497;52.234359;ul. A. Krywulta 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060115;11100945;21.02288422;52.23239571;Al. Jerozolimskie 8;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-W260105;17170301;20.97661411;52.22832918;ul. J. Korczaka 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080213;11101314;21.02452124;52.22758053;ul. B. Prusa / Wiejska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250721;11100418;20.99327389;52.24531409;ul. Nowolipki 15;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220102;17170903;20.99409052;52.2316202;ul. Pa駍ka 65;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080206;11101309;21.02834837;52.22855158;al. Na skarpie 20/26;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250710;11100407;20.99536275;52.24753877;ul. Dzielna 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B220220;17170919;20.99914617;52.23010538;ul. Z硂ta 61;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080215;11101315;21.02419786;52.22740446;ul. Wiejska 21;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060221;11100936;21.02005296;52.23417578;ul. K. I. Ga砪zy駍kiego / Przybosia;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E100104;11100729;21.00099538;52.23173485;ul. Sienna 43;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080220;11101321;21.02605737;52.22662861;ul. Frascati 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060209;11100930;21.02217666;52.23538228;ul. Ok髄nik 2;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250336;17170613;20.9916589;52.24366663;al. Jana Paw砤 II 43A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B080202;11101319;21.02668619;52.22711283;ul. Frascati 6;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250233;17170831;20.98808706;52.23129993;ul. Prosta 32;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060201;11100927;21.01901458;52.23577838;ul. Ordynacka 14;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250337;17170621;20.99254022;52.24265718;al. Jana Paw砤 II 41A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250236;17170828;20.984458;52.23168134;ul. cka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060302;11100922;21.01858052;52.23703136;ul. 寃i阾okrzyska 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250345;17170635;20.98287597;52.23950305;Skwer kard. S. Wyszy駍kiego 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060306;11100921;21.02040257;52.23721631;ul. M. Kopernika 30;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030408;11100817;21.01400537;52.23724381;ul. Dowcip;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-W260501;17170240;20.9740277;52.23547463;"Al. ""Solidarno渃i""";jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030206;11100812;21.01174265;52.23814577;ul. Kredytowa 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030205;11100814;21.01019539;52.23780137;ul. Kredytowa 7;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210104;17170802;20.98758504;52.23903347;ul. 痚lazna 89;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A030110;11100820;21.00880779;52.23679709;pl. D筨rowskiego 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240057;11100334;21.01622431;52.24625319;ul. Boczna 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250349;17170634;20.98629635;52.23972803;al. Solidarno渃i 94;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210109;17170701;20.99266567;52.24135239;al. Solidarno渃i 119/125;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210306;17170724;20.99135406;52.23485805;ul. Grzybowska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B210201;17170706;20.9949978;52.23978243;al. Jana Paw砤 II;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250637;11100135;20.99675416;52.25030765;ul. Nalewki 8;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250601;11100112;20.99284497;52.25357254;ul. Stawki 3;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240280;11100331;21.01918107;52.24729047;ul. Nowy Zjazd 1;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E040101;11101106;21.00460866;52.22808217;Al. Jerozolimskie 65;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060307;11100923;21.02101782;52.23685665;ul. E. Konopczy駍kiego;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240228;11101717;21.03490578;52.22452659;ul. Rozbrat 22/24;adapter;brak;adapter;;;;;;;;;;;;;;;;;;;
-B140220;16050305;21.0024284;52.2263847;ul. Cha硊bi駍kiego / Nowogrodzka;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240180;11101432;21.0345195;52.22923123;ul. Czerniakowska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-F250702;11100402;20.993177;52.248420;ul. Anielewicza 9;wyrwany do odtworzenia;brak;wyrwany do odtworzenia;;;;;;;;;;;;;;;;;;;
-17170204;W260614;20.96522956;52.2416621;ul. P硂cka 42;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240066;11100224;21.00091515;52.25136208;ul. Franciszka駍ka 18;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240077;11100345;21.01705626;52.24498678;ul. Bednarska 19/19A;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060335;11100352;21.01488171;52.243386;Skwer A. Mickiewicza;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240053;11100419;21.0003038;52.24501043;ul. Gen. W. Andersa;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-A110120;11100624;21.00345146;52.23751174;ul. Graniczna / Kr髄ewska;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060316;11100912;21.02120647;52.23818793;ul. Seweryn體 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-B060101;11100944;21.02137715;52.23240039;ul. Smolna 23;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240250;11101732;21.04003516;52.21810436;ul. Kawalerii;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-E240251;11101733;21.03910989;52.21790072;ul. Kawalerii 5;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-C120112;11101815;21.01773245;52.21322007;ul. L. Wary駍kiego;0;brak;0;;;;;;;;;;;;;;;;;;;
-P270213;13070207;21.04214652;52.26057529;ul. Stalowa 28 / Czynszowa;0;brak;0;;;;;;;;;;;;;;;;;;;
-C190131;16050110;20.98053386;52.22234992;Al. Jerozolimskie - Niemcewicza 26;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-D230006;16050206;20.99289971;52.22456297;ul. Nowogrodzka 76;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-W260604;17170230;20.97145943;52.23715567;ul. G髍czewska 4;jest na zero;brak;jest na zero;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;
+Kod;Numer;X;Y;Adres;Strefa;stan;
+11100501;E240062;21.00155962;52.24944222;ul. 艢wi臋tojerska;0;brak;0
+11101329;11101329;21.02544693;52.22396709;ul. Pi臋kna 1a;jest na zero;brak;jest na zero
+11101401;11101401;21.03649692;52.23664896;ul. Wybrze偶e Ko艣ciuszkowskie;jest na zero;brak;jest na zero
+11101402;11101402;21.0351149;52.23591192;ul. Wyb. Ko艣ciuszk. 17;jest na zero;brak;jest na zero
+11101405;11101405;21.03427373;52.2352968;ul Potockiego 4;jest na zero;brak;jest na zero
+11101409;11101409;21.03511239;52.23448003;al. 3 Maja 3;jest na zero;brak;jest na zero
+11101410;11101410;21.03641495;52.23448003;ul. Wio艣larska;jest na zero;brak;jest na zero
+11101423;11101423;21.03272287;52.23084885;ul. Or艂owicza 10;jest na zero;brak;jest na zero
+11101426;11101426;21.03974996;52.23045959;ul. Wilanowska 5;adapter;brak;adapter
+11101427;11101427;21.03164489;52.23010607;ul. Ludna / Czerniakowska;jest na zero;brak;jest na zero
+11101428;11101428;21.03864423;52.22990234;ul. Wilanowska / al. Zgrup. AK;adapter;brak;adapter
+11101430;11101430;21.03128557;52.22963289;ul. Rozbrat;jest na zero;brak;jest na zero
+11101433;11101433;21.0364902;52.22882274;ul. Wilanowska;jest na zero;brak;jest na zero
+11101504;11101504;21.00907323;52.22220263;ul. Noakowskiego 24;jest na zero;brak;jest na zero
+11101508;11101508;21.014592;52.22118016;ul. 艢niadeckich 1/15;jest na zero;brak;jest na zero
+11101511;11101511;21.01234761;52.2206758;ul. Lwowska 2;jest na zero;brak;jest na zero
+11101614;11101614;21.02027566;52.221735;ul. Koszykowa 5/27;jest na zero;brak;jest na zero
+11101628;11101628;21.02148054;52.21984583;al. Wyzwolenia 10;jest na zero;brak;jest na zero
+11101634;11101634;21.01729693;52.21915257;ul. Mokotowska 15;jest na zero;brak;jest na zero
+11101637;11101637;21.01694865;52.21828901;ul. Mokotowska 4/6;jest na zero;brak;jest na zero
+11101705;11101705;21.0382537;52.22704104;ul. Czerniakowska 203;jest na zero;brak;jest na zero
+11101709;11101709;21.03645987;52.22625443;ul. Ko藕mi艅ska 18;adapter;brak;adapter
+11101712;11101712;21.0394243;52.22570967;ul. G贸rno艣l膮ska 2;jest na zero;brak;jest na zero
+11101725;11101725;21.03512386;52.22335784;ul. Rozbrat;jest na zero;brak;jest na zero
+11101736;11101736;21.04416741;52.21604046;ul. Szwole偶er贸w 1;jest na zero;brak;jest na zero
+11101803;11101803;21.02372623;52.21695989;al. Szucha 16;jest na zero;brak;jest na zero
+11101808;11101808;21.02276986;52.21577288;al. J.C. Szucha 13/15;jest na zero;brak;jest na zero
+11101811;11101811;21.02230957;52.21448236;al. J. C.Szucha 2/4;adapter;brak;adapter
+11101817;11101817;21.02236538;52.21309342;ul. Klonowa 20;jest na zero;brak;jest na zero
+15040104;15040104;21.02328812;52.20958571;ul. Chocimska 15;jest na zero;brak;jest na zero
+15040109;15040109;21.02121046;52.20882567;ul. Olszewska 15;jest na zero;brak;jest na zero
+15040123;15040123;21.02198768;52.20694944;ul. Pu艂awska 24;Wyci臋te szpilki;brak;Wyci臋te szpilki
+15040129;15040129;21.02155609;52.2052644;ul. Madali艅skiego 3/5;jest na zero;brak;jest na zero
+15040136;15040136;21.02336843;52.20439084;ul. Pu艂awska 53;jest na zero;brak;jest na zero
+15040145;15040145;21.02295112;52.20345643;ul. Pu艂awska / R贸偶ana 1;jest na zero;brak;jest na zero
+15040146;15040146;21.02353905;52.20351401;ul. Pu艂awska / Morskie Oko;jest na zero;brak;jest na zero
+15040147;15040147;21.02230031;52.20273776;ul. D膮browskiego vis-a-vis 3;jest na zero;brak;jest na zero
+15040156;15040156;21.02337108;52.20075933;ul. Pu艂awska 62/64;jest na zero;brak;jest na zero
+15040234;15040234;21.02007213;52.20446863;ul. Olesi艅ska 10A;jest na zero;brak;jest na zero
+15101801;15101801;21.02144351;52.21296989;ul. Pu艂awska 1A;jest na zero;brak;jest na zero
+15101804;15101804;21.02284232;52.21252364;ul. Klonowa vis-a-vis 16;jest na zero;brak;jest na zero
+15101805;15101805;21.02099426;52.21220158;ul. Pu艂awska 5;adapter;brak;adapter
+16050102;16050102;20.98491166;52.22363468;Al. Jerozolimskie 133;jest na zero;brak;jest na zero
+16050108;16050108;20.9833995;52.22280791;ul. Spiska / Al. Jerozolimskie 135;jest na zero;brak;jest na zero
+16050119;16050119;20.97618345;52.22118942;Al. Jerozolimskie 153;jest na zero;brak;jest na zero
+16050126;16050126;20.98470198;52.22068836;ul. Gr贸jecka 28/30;jest na zero;brak;jest na zero
+16050132;16050132;20.98431872;52.22030446;ul. Gr贸jecka 32;jest na zero;brak;jest na zero
+16050135;16050135;20.97399967;52.219782;ul. Szcz臋艣liwicka 4;0;brak;0
+16050144;16050144;20.98248712;52.21887913;ul. Barska 2;jest na zero;brak;jest na zero
+16050147;16050147;20.98100847;52.21812191;ul. W臋gierska - Kaliska;jest na zero;brak;jest na zero
+16050149;16050149;20.98135036;52.21782509;ul. Kaliska 8/10;jest na zero;brak;jest na zero
+16050150;16050150;20.9813009;52.21688152;ul. Gr贸jecka 46/50;jest na zero;brak;jest na zero
+16050151;16050151;20.98410901;52.22191424;ul. Spiska 1;jest na zero;brak;jest na zero
+16050201;16050201;20.99152924;52.22570013;Al. Jerozolimskie PKP Ochota;jest na zero;brak;jest na zero
+16050203;16050203;20.99565299;52.225786;pl. Starynkiewicza 7/9;jest na zero;brak;jest na zero
+16050204;16050204;20.99015201;52.22475637;Al. Jerozolimskie 125/127;jest na zero;brak;jest na zero
+16050215;16050215;20.98970938;52.22257699;ul. Raszy艅ska 14;jest na zero;brak;jest na zero
+16050216;16050216;20.9873536;52.22248187;ul. Daleka / Gr贸jecka 17;jest na zero;brak;jest na zero
+16050217;16050217;20.98675746;52.22229389;ul. Gr贸jecka 17;jest na zero;brak;jest na zero
+16050228;16050228;20.98992468;52.22041988;ul. Raszy艅ska / J. U. Niemcewicza 1;jest na zero;brak;jest na zero
+16050232;16050232;20.9868552;52.21916977;ul. Filtrowa 81;jest na zero;brak;jest na zero
+16050233;16050233;20.9876892;52.21912224;ul. Filtrowa 79;jest na zero;brak;jest na zero
+16050236;16050236;20.98592726;52.21893242;ul. Akademicka / Filtrowa 83;jest na zero;brak;jest na zero
+16050237;16050237;20.98911546;52.21877365;ul. Raszy艅ska / Filtrowa 75;jest na zero;brak;jest na zero
+16050239;16050239;20.99094533;52.21858372;ul. Sz. Zimorowicza 7;jest na zero;brak;jest na zero
+16050244;16050244;20.98989336;52.21819165;ul. J. Dantyszka 20;jest na zero;brak;jest na zero
+16050245;16050245;20.99145662;52.21813437;ul. J. Dantyszka / Sz. Zimorowica 2;jest na zero;brak;jest na zero
+16050251;16050251;20.98545147;52.21735722;ul. M. Mochnackiego 8;jest na zero;brak;jest na zero
+16050253;16050253;20.98942946;52.21729256;ul. M. Reja 4;jest na zero;brak;jest na zero
+16050255;16050255;20.98379215;52.21710565;ul. M. Mochnackiego 10;jest na zero;brak;jest na zero
+16050257;16050257;20.98181498;52.21668689;ul. Gr贸jecka 43;jest na zero;brak;jest na zero
+16050302;16050302;20.99997519;52.22716749;Al. Jerozolimskie 87;jest na zero;brak;jest na zero
+16050309;16050309;20.99581348;52.22506671;pl. Starynkiewicza / Nowogrodzka;jest na zero;brak;jest na zero
+16050313;16050313;21.00073284;52.22424002;ul. Oczki 1A;jest na zero;brak;jest na zero
+16050320;16050320;21.00016597;52.22240776;ul. Krzywickiego vis-a-vis 34;jest na zero;brak;jest na zero
+16050321;16050321;21.00454203;52.22243133;al. Niepodleg艂o艣ci 245;jest na zero;brak;jest na zero
+16050322;16050322;21.00024102;52.22154208;ul. Krzywickiego 34;jest na zero;brak;jest na zero
+16050332;16050332;20.99676958;52.2184473;ul. Orzechowska 4;jest na zero;brak;jest na zero
+16050335;16050335;21.00317546;52.21817008;ul. Langiewicza 6;jest na zero;brak;jest na zero
+17170216;17170216;20.96740879;52.23961763;ul. E. Tyszkiewicza 13;jest na zero;brak;jest na zero
+17170221;17170221;20.96796881;52.23868077;ul. 呕ytnia / E. Tyszkiewicza;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+17170223;17170223;20.97814895;52.23842737;ul. Okopowa / Leszno;jest na zero;brak;jest na zero
+17170224;17170224;20.96835277;52.23786776;ul. E. Tyszkiewicza 6;jest na zero;brak;jest na zero
+17170234;17170234;20.97965441;52.23654988;"Al. ""Solidarno艣ci"" / Okopowa";jest na zero;brak;jest na zero
+17170237;17170237;20.97117333;52.23587445;ul. S. Staszica;jest na zero;brak;jest na zero
+17170247;17170247;20.9674773;52.23453427;ul. Dzia艂dowska 6;jest na zero;brak;jest na zero
+17170248;17170248;20.97073435;52.23454396;ul. Wolska 40;jest na zero;brak;jest na zero
+17170250;17170250;20.97059057;52.23423216;ul. Wolska 41;jest na zero;brak;jest na zero
+17170251;17170251;20.97730485;52.23403353;ul. Jaktorowska / Karolkowa;jest na zero;brak;jest na zero
+17170252;17170252;20.96877362;52.23409942;ul. Wolska 50A;jest na zero;brak;jest na zero
+17170258;17170258;20.98043469;52.23245121;ul. Przyokopowa;jest na zero;brak;jest na zero
+17170265;17170265;20.98065127;52.23141311;ul. Przyokopowa;jest na zero;brak;jest na zero
+17170267;17170267;20.97799386;52.23077438;ul. Karolkowa 28;jest na zero;brak;jest na zero
+17170272;17170272;20.97820563;52.22995755;ul. Karolkowa / Hrubieszowska;jest na zero;brak;jest na zero
+17170315;17170315;20.97916961;52.2253657;ul. Kolejowa 37/39;jest na zero;brak;jest na zero
+17170403;17170403;20.95551221;52.23062624;ul. Wolska 105/107;jest na zero;brak;jest na zero
+17170414;17170414;20.95893747;52.22275093;al. Prymasa Tysi膮clecia 44;jest na zero;brak;jest na zero
+17170522;17170522;20.96523945;52.23771709;ul. P艂ocka 41;jest na zero;brak;jest na zero
+17170528;17170528;20.96519235;52.23587122;ul. P艂ocka 37;jest na zero;brak;jest na zero
+17170529;17170529;20.95976791;52.23569438;ul. Soko艂owska 10;jest na zero;brak;jest na zero
+17170531;17170531;20.96018144;52.23438516;ul. Soko艂owska 4;jest na zero;brak;jest na zero
+17170535;17170535;20.96282909;52.23315135;ul. Wolska 68/72;jest na zero;brak;jest na zero
+17170536;17170536;20.96431346;52.23338824;ul. Wolska 64;jest na zero;brak;jest na zero
+17170716;17170716;20.99155239;52.23701439;ul. Walic贸w;jest na zero;brak;jest na zero
+17170719;17170719;20.99007605;52.23629132;ul. Krochmalna 46;jest na zero;brak;jest na zero
+17170722;17170722;20.99040329;52.23540474;ul. 呕elazna 58/62;jest na zero;brak;jest na zero
+17170730;17170730;20.99724473;52.23371414;ul. Ciep艂a 3;jest na zero;brak;jest na zero
+17170814;17170814;20.9840117;52.23612762;ul. Ch艂odna 52;jest na zero;brak;jest na zero
+17170820;17170820;20.98971298;52.23442501;ul. Grzybowska 47;jest na zero;brak;jest na zero
+17170906;17170906;20.99798921;52.23109837;ul. Sienna 59;jest na zero;brak;jest na zero
+17170925;17170925;20.99294714;52.22841121;ul. Twarda 60;jest na zero;brak;jest na zero
+17170933;17170933;20.99185442;52.22759897;Skwer Chrobry II;jest na zero;brak;jest na zero
+A010306;11100827;21.01683589;52.23614045;ul. Kubusia Puchatka;jest na zero;brak;jest na zero
+A010307;11100829;21.01686767;52.23575697;ul. Kubusia Puchatka;jest na zero;brak;jest na zero
+A010316;1010316;21.016800615524;52.234440065375;ul. Tuwima/G贸rskiego 4;jest na zero;brak;jest na zero
+A010318;1010318;21.016199447557;52.234904418475;ul. Baczy艅skiego 4;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+A010322;11100848;21.01523693;52.23358222;ul. W. G贸rskiego 9;jest na zero;brak;jest na zero
+A030110;11100820;21.00880779;52.23679709;pl. D膮browskiego 5;jest na zero;brak;jest na zero
+A030115;1030115;21.007911887877;52.23667515067;ul. Marsza艂kowska 140;jest na zero;brak;jest na zero
+A030205;11100814;21.01019539;52.23780137;ul. Kredytowa 7;jest na zero;brak;jest na zero
+A030206;11100812;21.01174265;52.23814577;ul. Kredytowa 1;jest na zero;brak;jest na zero
+A030216;1030216;21.010149176687;52.236881337901;pl. D膮browskiego 2-4;jest na zero;brak;jest na zero
+A030301;11100801;21.01478622;52.24049293;ul. Kr贸lewska 1/7;jest na zero;brak;jest na zero
+A030401;11100806;21.01599376;52.23918056;ul. Traugutta 3;jest na zero;brak;jest na zero
+A030402;11100807;21.01474979;52.23896031;ul. Traugutta 5;jest na zero;brak;jest na zero
+A030408;11100817;21.01400537;52.23724381;ul. Dowcip;jest na zero;brak;jest na zero
+A070109;11100530;21.00646009;52.24347605;ul. Senatorska 22;jest na zero;brak;jest na zero
+A070114;11100534;21.00401194;52.24311892;ul. Senatorska 38;jest na zero;brak;jest na zero
+A070118;11100536;21.00565447;52.24295057;ul. Senatorska 31;jest na zero;brak;jest na zero
+A070119;11100531;21.00691082;52.24346508;ul. Senatorska / Canaletta;jest na zero;brak;jest na zero
+A070226;1070226;21.012557766399;52.24185838492;pl. Pi艂sudskiego 1;0;brak;0
+A070306;1070306;21.012856459721;52.243401168501;ul. Tr臋backa 4;jest na zero;brak;jest na zero
+A070310;1070310;21.013765553642;52.24340765325;ul. Tr臋backa 3;jest na zero;brak;jest na zero
+A070321;11100543;21.01525094;52.24167821;ul. Gen. M. Tokarzewskiego - Karasz.;jest na zero;brak;jest na zero
+A070323;11100541;21.01439445;52.2421919;ul. Ossoli艅skich 3;jest na zero;brak;jest na zero
+A070324;11100337;21.01193153;52.24597383;ul. Senatorska 6;jest na zero;brak;jest na zero
+A110110;1110110;21.002199328374;52.237370484621;ul. Grzybowska 4;jest na zero;brak;jest na zero
+A110120;11100624;21.00345146;52.23751174;ul. Graniczna / Kr贸lewska;jest na zero;brak;jest na zero
+A110122;11100708;21.00227611;52.23545935;ul. Twarda 2;jest na zero;brak;jest na zero
+A110210;1110210;21.003873188396;52.236332608578;pl. Grzybowski 4;jest na zero;brak;jest na zero
+A110214;1110214;21.004190792678;52.235813505135;pl. Grzybowski 2;jest na zero;brak;jest na zero
+A110217;11100709;21.0023381;52.23519946;ul. Twarda 1;jest na zero;brak;jest na zero
+A110219;11100710;21.00431151;52.23500362;ul. R. Wallenberga;jest na zero;brak;jest na zero
+A110229;11100707;21.00536033;52.23568715;ul. Bagno 5;jest na zero;brak;jest na zero
+A110308;1110308;21.001548912297;52.234680894387;ul. Emilii Plater 55;jest na zero;brak;jest na zero
+A110312;1110312;20.998543881409;52.23407781581;ul. Twarda 15;jest na zero;brak;jest na zero
+A150101;11100613;20.99888644;52.24073264;ul. Elektoralna 8/10;jest na zero;brak;jest na zero
+A150119;1150119;21.002006919389;52.241804727822;ul. Elektoralna 2;jest na zero;brak;jest na zero
+A150126;1150126;20.999816598811;52.243730921755;al. Solidarno艣ci 83;jest na zero;brak;jest na zero
+A150130;1150130;20.999018917645;52.243830116387;al. Solidarno艣ci 72;jest na zero;brak;jest na zero
+A150213;1150213;20.996867867957;52.239907415922;ul. Elektoralna 21-23;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+A150218;1150218;21.000001412472;52.239731704827;pl. Mirowski-Zimna;jest na zero;brak;jest na zero
+A150220;11100616;21.00151096;52.23996322;ul. Ptasia 2;jest na zero;brak;jest na zero
+B050114;11101623;21.01750399;52.22083742;ul. Marsza艂kowska 34/50;jest na zero;brak;jest na zero
+B050213;2050213;21.021206748526;52.221599671161;al. R贸偶-Koszykowa;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B050214;2050214;21.021334007346;52.221229673404;ul. Koszykowa 3;jest na zero;brak;jest na zero
+B050218;2050218;21.022141132322;52.2203671849;ul. S艂u偶ewska 2;jest na zero;brak;jest na zero
+B050226;2050226;21.020573552354;52.221229200005;ul. Natoli艅ska 2;jest na zero;brak;jest na zero
+B050227;2050227;21.019996538072;52.220871247279;ul. Natoli艅ska 3;wystaje kwadrat;brak;wystaje kwadrat
+B050301;2050301;21.016229657715;52.219842372926;ul. Nowowiejska 3;jest na zero;brak;jest na zero
+B050306;2050306;21.017013598086;52.218689668481;ul. Mokotowska 9;jest na zero;brak;jest na zero
+B050310;11101636;21.01895166;52.21836693;ul. Marsza艂kowska 28;jest na zero;brak;jest na zero
+B050313;2050313;21.018968056502;52.219774845445;al. Wyzwolenia 15;jest na zero;brak;jest na zero
+B050325;2050325;21.019948005718;52.218698356929;ul. Sempo艂owskiej 3;jest na zero;brak;jest na zero
+B060101;11100944;21.02137715;52.23240039;ul. Smolna 23;jest na zero;brak;jest na zero
+B060102;11100943;21.02240157;52.23263012;ul. Smolna 23;jest na zero;brak;jest na zero
+B060113;11100942;21.02469478;52.23274942;Al. Jerozolimskie 2;jest na zero;brak;jest na zero
+B060115;11100945;21.02288422;52.23239571;Al. Jerozolimskie 8;jest na zero;brak;jest na zero
+B060201;11100927;21.01901458;52.23577838;ul. Ordynacka 14;jest na zero;brak;jest na zero
+B060209;11100930;21.02217666;52.23538228;ul. Ok贸lnik 2;jest na zero;brak;jest na zero
+B060212;11100934;21.0221497;52.234359;ul. A. Krywulta 2;jest na zero;brak;jest na zero
+B060217;11100937;21.02150291;52.23395738;ul. M. Kopernika / Foksal;jest na zero;brak;jest na zero
+B060221;11100936;21.02005296;52.23417578;ul. K. I. Ga艂czy艅skiego / Przybosia;jest na zero;brak;jest na zero
+B060227;2060227;21.020641135041;52.235686242462;ul. Kopernika - Ordynacka;jest na zero;brak;jest na zero
+B060302;11100922;21.01858052;52.23703136;ul. 艢wi臋tokrzyska 3;jest na zero;brak;jest na zero
+B060306;11100921;21.02040257;52.23721631;ul. M. Kopernika 30;jest na zero;brak;jest na zero
+B060307;11100923;21.02101782;52.23685665;ul. E. Konopczy艅skiego;jest na zero;brak;jest na zero
+B060309;11100917;21.02046258;52.23779441;ul. J. Bartoszewicza 11;jest na zero;brak;jest na zero
+B060316;11100912;21.02120647;52.23818793;ul. Seweryn贸w 4;jest na zero;brak;jest na zero
+B060320;11100909;21.01938289;52.23861152;ul. K. Karasia 2;jest na zero;brak;jest na zero
+B060325;2060325;21.01863865822;52.238425041968;pl. Osterwy 1;jest na zero;brak;jest na zero
+B060332;2060332;21.017559756031;52.242647850728;ul. Karowa 18;jest na zero;brak;jest na zero
+B060334;2060334;21.014603269166;52.244915709224;ul. Krakowskie Przedmie艣cie 62;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B060335;11100352;21.01488171;52.243386;Skwer A. Mickiewicza;jest na zero;brak;jest na zero
+B080114;11101305;21.02125138;52.23142106;ul. Nowy 艢wiat / Al. Jerozolimskie;jest na zero;brak;jest na zero
+B080118;11101303;21.02485732;52.23245817;Al. Jerozolimskie;jest na zero;brak;jest na zero
+B080202;11101319;21.02668619;52.22711283;ul. Frascati 6;jest na zero;brak;jest na zero
+B080206;11101309;21.02834837;52.22855158;al. Na skarpie 20/26;jest na zero;brak;jest na zero
+B080213;11101314;21.02452124;52.22758053;ul. B. Prusa / Wiejska;jest na zero;brak;jest na zero
+B080215;11101315;21.02419786;52.22740446;ul. Wiejska 21;jest na zero;brak;jest na zero
+B080220;11101321;21.02605737;52.22662861;ul. Frascati 1;jest na zero;brak;jest na zero
+B090114;11100502;21.00563925;52.24831409;ul. D艂uga 24;jest na zero;brak;jest na zero
+B140103;2140103;21.0000857;52.2261028;ul. Nowogrodzka v-vis 64;jest na zero;brak;jest na zero
+B140107;2140107;20.998698085822;52.22573434935;ul. Nowogrodzka v-vis 66;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B140109;2140109;20.997519784893;52.225476494681;ul. Nowogrodzka v-vis 68;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B140220;16050305;21.0024284;52.2263847;ul. Cha艂ubi艅skiego / Nowogrodzka;jest na zero;brak;jest na zero
+B160105;2160105;21.0044903;52.2203877;al. Niepodleg艂o艣ci 235;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B160111;2160111;21.008406462985;52.222479981802;ul. Noakowskiego (Skwer);jest na zero;brak;jest na zero
+B160125;2160125;21.010469417877;52.219897543612;ul. Nowowiejska 25;jest na zero;brak;jest na zero
+B160205;2160205;21.010337513503;52.221359879703;ul. Noakowskiego 12;Wyci臋te szpilki;brak;Wyci臋te szpilki
+B160213;2160213;21.0122803;52.2211694;ul. Lwowska 9;jest na zero;brak;jest na zero
+B160218;2160218;21.0129874263;52.220360632393;ul. 艢niadeckich 21;jest na zero;brak;jest na zero
+B160226;2160226;21.014839301237;52.220007228598;ul. Nowowiejska 10;stoi na starym adapter;brak;stoi na starym adapter
+B160228;2160228;21.013197796448;52.220017895067;ul. Nowowiejska 12-18;jest na zero;brak;jest na zero
+B210103;2210103;20.991059108659;52.241387534506;al. Solidarno艣ci 84;jest na zero;brak;jest na zero
+B210104;17170802;20.98758504;52.23903347;ul. 呕elazna 89;jest na zero;brak;jest na zero
+B210109;17170701;20.99266567;52.24135239;al. Solidarno艣ci 119/125;jest na zero;brak;jest na zero
+B210125;2210125;20.9883695;52.240349;al. Solidarno艣ci 88;jest na zero;brak;jest na zero
+B210201;17170706;20.9949978;52.23978243;al. Jana Paw艂a II;jest na zero;brak;jest na zero
+B210202;2210202;20.994903409275;52.239304141362;ul. Elektoralna 24;jest na zero;brak;jest na zero
+B210211;2210211;20.992862074029;52.238027291799;ul. Ch艂odna (park);wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B210218;17170718;20.98952607;52.23681134;ul. 呕elazna 68;jest na zero;brak;jest na zero
+B210302;2210302;20.995513881838;52.236737287197;ul. Ciep艂a;jest na zero;brak;jest na zero
+B210304;2210304;20.992139747337;52.235373674471;ul. Walic贸w 13;jest na zero;brak;jest na zero
+B210306;17170724;20.99135406;52.23485805;ul. Grzybowska;jest na zero;brak;jest na zero
+B210309;2210309;20.990102749397;52.235578635231;ul. 呕elazna 67;jest na zero;brak;jest na zero
+B210314;2210314;20.994979945164;52.233923910629;ul. Pereca 4;jest na zero;brak;jest na zero
+B210319;2210319;20.995951627372;52.235475763719;ul. Ciep艂a - Grzybowska;jest na zero;brak;jest na zero
+B210324;2210324;20.990578660507;52.234794546841;ul. 呕elazna 63;jest na zero;brak;jest na zero
+B220101;2220101;20.993473779793;52.231455848736;ul. Pa艅ska 65;jest na zero;brak;jest na zero
+B220102;17170903;20.99409052;52.2316202;ul. Pa艅ska 65;jest na zero;brak;jest na zero
+B220115;17170907;20.99932396;52.23116098;al. Jana Paw艂a II(;jest na zero;brak;jest na zero
+B220126;17170916;20.9938078;52.22997015;ul. 呕elazna 28/30;jest na zero;brak;jest na zero
+B220209;2220209;20.9997755;52.2274492;Al. Jerozolimskie v-v 87;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+B220210;2220210;20.998514925805;52.227249057917;Al. Jerozolimskie 56c;jest na zero;brak;jest na zero
+B220212;17170927;20.99465475;52.22828043;ul. 呕elazna 27;jest na zero;brak;jest na zero
+B220214;2220214;20.995368619606;52.229253604863;ul. Z艂ota 79;jest na zero;brak;jest na zero
+B220216;2220216;20.997233551926;52.229685414078;ul. Z艂ota 69;jest na zero;brak;jest na zero
+B220220;17170919;20.99914617;52.23010538;ul. Z艂ota 61;jest na zero;brak;jest na zero
+C120101;3120101;21.019780075917;52.214654303922;ul. Polna 3;Wyci臋te szpilki;brak;Wyci臋te szpilki
+C120105;11101804;21.01731328;52.21656804;ul. Polna 24;jest na zero;brak;jest na zero
+C120112;11101815;21.01773245;52.21322007;ul. L. Wary艅skiego;0;brak;0
+C120203;11101807;21.0206213;52.21553743;ul. Marsza艂kowska 10/16;jest na zero;brak;jest na zero
+C120204;11101805;21.02013438;52.21636865;ul. Marsza艂kowska 20/22;jest na zero;brak;jest na zero
+C130109;3130109;21.021956318257;52.211656914413;ul. Skolimowska 3;Wyci臋te szpilki;brak;Wyci臋te szpilki
+C130211;3130211;21.020935098886;52.207272889773;ul. Narbutta 4;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+C130309;3130309;21.023569236757;52.208888351155;ul. Chocimska 9;jest na zero;brak;jest na zero
+C180120;13070708;21.03224149;52.25210198;ul. Floria艅ska 8;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+C180217;13070730;21.03847675;52.25067412;ul. K臋pna 8;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+C190103;3190103;20.985497548511;52.221587007814;ul. Gr贸jecka 22-24;jest na zero;brak;jest na zero
+C190120;3190120;20.980740026016;52.220090611681;ul. Kaliska 13;jest na zero;brak;jest na zero
+C190129;3190129;20.98339901376;52.220430272241;ul. Poniecka;jest na zero;brak;jest na zero
+C200105;3200105;21.022804365558;52.204025189524;ul. Pu艂awska 40;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+C200114;3200114;21.020292258284;52.202024353569;ul. Ba艂uckiego 27;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+C200203;3200203;21.020851390756;52.201077255878;ul. Ba艂uckiego 19;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+C200207;3200207;21.023146707767;52.201533072425;ul. Pu艂awska 54-56;Wyci臋te szpilki;brak;Wyci臋te szpilki
+D230002;4230002;20.992791125067;52.2255682384;Al. Jerozolimskie 113-117;jest na zero;brak;jest na zero
+D230003;4230003;20.993733392772;52.225645116101;Al. Jerozolimskie 113-117 Parking;jest na zero;brak;jest na zero
+D230006;16050206;20.99289971;52.22456297;ul. Nowogrodzka 76;jest na zero;brak;jest na zero
+D230012;4230012;20.994207617907;52.223523560748;ul. Koszykowa v-v 86;jest na zero;brak;jest na zero
+E040101;11101106;21.00460866;52.22808217;Al. Jerozolimskie 65;jest na zero;brak;jest na zero
+E040202;5040202;21.008071457474145;52.22893464111643;Al. Jerozolimskie 53;jest na zero;brak;jest na zero
+E040228;5040228;21.007171251364;52.228664524819;Al. Jerozolimskie 57;Wyci臋te szpilki;brak;Wyci臋te szpilki
+E090203;11100325;21.00737912;52.24950671;ul. D艂uga 9;jest na zero;brak;jest na zero
+E090209;11100326;21.00863047;52.24952243;ul. Kili艅skiego 3;jest na zero;brak;jest na zero
+E090210;5090210;21.009024614349;52.249488207641;ul. Kili艅skiego;jest na zero;brak;jest na zero
+E090212;5090212;21.009548525674;52.248781133418;ul. Podwale 17;jest na zero;brak;jest na zero
+E090217;5090217;21.011223439722;52.247904383699;ul. Podwale;jest na zero;brak;jest na zero
+E090219;5090219;21.011742863364;52.247534646686;ul. Podwale 5;jest na zero;brak;jest na zero
+E100102;5100102;20.99991939247;52.231516473629;ul. Sienna - Jana Paw艂a;jest na zero;brak;jest na zero
+E100104;11100729;21.00099538;52.23173485;ul. Sienna 43;jest na zero;brak;jest na zero
+E100105;5100105;21.001811563011;52.232113106519;ul. 艢liska 3;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E100106;5100106;21.001595694658;52.232503015721;ul. 艢liska (Apteka);wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E100107;5100107;21.000876419781;52.232225892487;ul. 艢liska 8;jest na zero;brak;jest na zero
+E100108;5100108;21.000109928671;52.232184570062;ul. 艢liska 10;jest na zero;brak;jest na zero
+E100109;5100109;21.002756026459;52.232290901483;ul. Sosnowa - Sienna;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E100110;5100110;21.0004296;52.2330531;ul. Pa艅ska 7;jest na zero;brak;jest na zero
+E100111;5100111;21.001256885487;52.233182327018;ul. Pa艅ska 5;jest na zero;brak;jest na zero
+E100207;11100731;21.00328165;52.23142027;ul. Emilii Plater 47;jest na zero;brak;jest na zero
+E100212;5100212;21.0088753;52.229336;Al. Jerozolimskie;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E100302;5100302;21.0043646;52.2289211;ul. Emilii Plater Dw. Centralny;jest na zero;brak;jest na zero
+E100303;5100303;21.004171936451;52.229281955607;ul. Emilii Plater Dw. Centralny;jest na zero;brak;jest na zero
+E100306;5100306;21.001091151219;52.230644761966;ul. Z艂ota 48/54;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E100309;5100309;21.003008498635;52.231032573494;ul. Z艂ota 44;jest na zero;brak;jest na zero
+E100310;5100310;21.004943111223;52.229074020202;ul. Emilii Plater Dw. Centralny;jest na zero;brak;jest na zero
+E240002;5240002;21.006132440472;52.259913610256;ul. S艂omi艅skiego rej. Mostu Gd;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E240006;5240006;21.00332145;52.25510502;ul. Konwiktorska 4;jest na zero;brak;jest na zero
+E240011;5240011;21.009114378479;52.25617232997;ul. Sanguszki 35;jest na zero;brak;jest na zero
+E240017;11100218;21.00063723;52.25321255;ul. Bonifraterska 10c;jest na zero;brak;jest na zero
+E240018;11100216;21.00134547;52.25354654;ul. W. Dola艅skiego 2;jest na zero;brak;jest na zero
+E240032;5240032;21.009099801864;52.254078623783;ul. Ko艣cielna Ko艣ci贸艂;jest na zero;brak;jest na zero
+E240048;11100332;21.01692877;52.24697309;ul. Nowy Zjazd;jest na zero;brak;jest na zero
+E240049;11100311;21.01256027;52.25217414;ul. Bole艣膰 / Rybaki;jest na zero;brak;jest na zero
+E240051;11100313;21.01187192;52.25174985;ul. Bugaj / Mostowa;jest na zero;brak;jest na zero
+E240053;11100419;21.0003038;52.24501043;ul. Gen. W. Andersa;jest na zero;brak;jest na zero
+E240057;11100334;21.01622431;52.24625319;ul. Boczna 3;jest na zero;brak;jest na zero
+E240058;11100223;20.99996106;52.2516151;ul. Wa艂owa 6;jest na zero;brak;jest na zero
+E240066;11100224;21.00091515;52.25136208;ul. Franciszka艅ska 18;jest na zero;brak;jest na zero
+E240068;5240068;21.003439995492;52.250473666528;ul. Bonifraterska rej. 艢wi臋toj;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E240069;11100317;21.00338434;52.25100536;ul. Bonifraterska 6;jest na zero;brak;jest na zero
+E240074;11100319;21.00470028;52.25080027;ul. Nowiniarska 8;jest na zero;brak;jest na zero
+E240077;11100345;21.01705626;52.24498678;ul. Bednarska 19/19A;jest na zero;brak;jest na zero
+E240078;11100342;21.01885288;52.2453718;ul. Bednarska 10;jest na zero;brak;jest na zero
+E240083;11100349;21.01902357;52.24446425;ul. Furma艅ska;jest na zero;brak;jest na zero
+E240104;11101009;21.02328602;52.2415513;ul. Lipowa;jest na zero;brak;jest na zero
+E240115;11101014;21.02499022;52.24039305;ul. Leszczy艅ska 1;jest na zero;brak;jest na zero
+E240119;5240119;21.026030224755;52.239523498897;ul. Drewniana 7;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E240126;11101020;21.0315102;52.23869722;ul. Wybrze偶e Ko艣ciuszkowskie 39;jest na zero;brak;jest na zero
+E240127;11100913;21.02427872;52.23808891;ul. Zaj臋cza;jest na zero;brak;jest na zero
+E240129;11100920;21.02457515;52.23736826;ul. Cicha 1;jest na zero;brak;jest na zero
+E240131;11101026;21.02759873;52.2378439;ul. Tamka 15;jest na zero;brak;jest na zero
+E240139;11101023;21.03008182;52.23818243;ul. J. Smulikowskiego 9;jest na zero;brak;jest na zero
+E240142;11101029;21.0309532;52.23714271;ul. Smulikowskiego;jest na zero;brak;jest na zero
+E240144;11101030;21.02990217;52.23701068;ul. Dobra 11;jest na zero;brak;jest na zero
+E240159;11101408;21.03273185;52.23445253;al. 3 Maja 12;jest na zero;brak;jest na zero
+E240163;11101412;21.03307321;52.23406741;al. 3 Maja 5;jest na zero;brak;jest na zero
+E240179;5240179;21.034038373727;52.229299610625;ul. Czerniakowska - Park 1;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+E240180;11101432;21.0345195;52.22923123;ul. Czerniakowska;jest na zero;brak;jest na zero
+E240228;11101717;21.03490578;52.22452659;ul. Rozbrat 22/24;adapter;brak;adapter
+E240239;5240239;21.035922502668;52.222912077986;ul. Przemys艂owa 38;jest na zero;brak;jest na zero
+E240250;11101732;21.04003516;52.21810436;ul. Kawalerii;jest na zero;brak;jest na zero
+E240251;11101733;21.03910989;52.21790072;ul. Kawalerii 5;jest na zero;brak;jest na zero
+E240265;5240265;21.007990671109;52.255092777076;ul. Przyrynek 9;jest na zero;brak;jest na zero
+E240274;11100926;21.02793485;52.2358389;ul. L. Kruczkowskiego;jest na zero;brak;jest na zero
+E240275;11101036;21.02839299;52.23579489;ul. L. Kruczkowskiego 12B;jest na zero;brak;jest na zero
+E240280;11100331;21.01918107;52.24729047;ul. Nowy Zjazd 1;jest na zero;brak;jest na zero
+E240294;5240294;21.035124837309;52.224912183128;ul. G贸rno艣l膮ska 29;jest na zero;brak;jest na zero
+F170310;6170310;20.986833013594;52.218164717952;ul. Mochnackiego 4;jest na zero;brak;jest na zero
+F170322;6170322;20.9925329;52.2189909;ul. Filtrowa 67;jest na zero;brak;jest na zero
+F170323;6170323;20.9927283;52.2185685;ul. Warszewickiego 3;jest na zero;brak;jest na zero
+F170408;6170408;20.9980453;52.2188376;ul. Filtrowa 59;jest na zero;brak;jest na zero
+F250104;6250104;20.98762905738;52.230375861438;ul. Pa艅ska vis-vis 101;jest na zero;brak;jest na zero
+F250105;6250105;20.988736201557;52.230465003262;ul. Pa艅ska 97;jest na zero;brak;jest na zero
+F250113;6250113;20.992278568942;52.229914359641;ul. Sienna 87;jest na zero;brak;jest na zero
+F250119;6250119;20.990149933572;52.227581426511;ul. Srebrna 6;jest na zero;brak;jest na zero
+F250130;6250130;20.993415619613;52.228445980712;ul. Twarda 51;jest na zero;brak;jest na zero
+F250208;6250208;20.987364476133;52.238287346964;ul. Ogrodowa 39-41;jest na zero;brak;jest na zero
+F250218;6250218;20.98497923113;52.235645487377;ul. Wronia/Krochmalna;jest na zero;brak;jest na zero
+F250231;6250231;20.991133191525;52.232860646986;ul. 艁ucka 1-3-5;jest na zero;brak;jest na zero
+F250233;17170831;20.98808706;52.23129993;ul. Prosta 32;jest na zero;brak;jest na zero
+F250235;6250235;20.988075528711;52.236852740184;ul. Ch艂odna 29;jest na zero;brak;jest na zero
+F250236;17170828;20.984458;52.23168134;ul. 艁ucka;jest na zero;brak;jest na zero
+F250313;6250313;20.9854889;52.2443414;Skwer Apfelbauma;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+F250326;6250326;20.9865104;52.2430754;ul. Nowolipki 25;jest na zero;brak;jest na zero
+F250333;17170617;20.98752673;52.24297054;ul. Smocza;jest na zero;brak;jest na zero
+F250336;17170613;20.9916589;52.24366663;al. Jana Paw艂a II 43A;jest na zero;brak;jest na zero
+F250337;17170621;20.99254022;52.24265718;al. Jana Paw艂a II 41A;jest na zero;brak;jest na zero
+F250345;17170635;20.98287597;52.23950305;Skwer kard. S. Wyszy艅skiego 3;jest na zero;brak;jest na zero
+F250347;6250347;20.986589048877;52.240189145348;ul. 呕elazna - al. Solidarno艣ci 92;jest na zero;brak;jest na zero
+F250349;17170634;20.98629635;52.23972803;al. Solidarno艣ci 94;jest na zero;brak;jest na zero
+F250404;17170117;20.98451504;52.25087002;ul. Stawki;jest na zero;brak;jest na zero
+F250416;17170129;20.98488703;52.24673836;ul. Smocza 18;jest na zero;brak;jest na zero
+F250511;6250511;20.996677441461;52.253750778385;ul. Stawki 2;jest na zero;brak;jest na zero
+F250520;11100128;20.98617036;52.25129022;ul. Stawki 14;jest na zero;brak;jest na zero
+F250601;11100112;20.99284497;52.25357254;ul. Stawki 3;jest na zero;brak;jest na zero
+F250604;11100131;20.98728678;52.25102761;ul. Niska 12;jest na zero;brak;jest na zero
+F250637;11100135;20.99675416;52.25030765;ul. Nalewki 8;jest na zero;brak;jest na zero
+F250701;6250701;20.996482277029;52.248946883955;ul. Anielewicza 3-5;jest na zero;brak;jest na zero
+F250702;11100402;20.993177;52.248420;ul. Anielewicza 9;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+F250710;11100407;20.99536275;52.24753877;ul. Dzielna 4;jest na zero;brak;jest na zero
+F250721;11100418;20.99327389;52.24531409;ul. Nowolipki 15;jest na zero;brak;jest na zero
+F250726;11100423;20.99313692;52.2428061;Al. Jana Paw艂a II 46/48;jest na zero;brak;jest na zero
+G010211;7010211;21.0158818;52.2314709;ul. Krucza 51b;jest na zero;brak;jest na zero
+G020201;7020201;21.0170473;52.2307614;Al. Jerozolimskie 17;Wyci臋te szpilki;brak;Wyci臋te szpilki
+G020209;7020209;21.0202775;52.2306297;ul. Mysia 2;stoi na starym;brak;stoi na starym
+G020323;7020323;21.0173283;52.2252844;ul. Wilcza 26;jest na zero;brak;jest na zero
+G040706;7040706;21.0131969;52.2244153;ul. Wilcza 44;Wyci臋te szpilki;brak;Wyci臋te szpilki
+G050224;7050224;21.0198847;52.2219958;ul. Koszykowa 20;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+G050229;7050229;21.022371552569;52.223735984711;ul. Pi臋kna 3a;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+G100225;7100225;21.0092416;52.2320503;ul. Marsza艂kowska Pl.Defilad;jest na zero;brak;jest na zero
+M040237;13040237;21.015689942293;52.204314841988;ul. A. J. Madali艅skiego 31/33;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+M040342;13040342;21.004252096872;52.201284117055;ul. M. Kar艂owicza 12;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+P270213;13070207;21.04214652;52.26057529;ul. Stalowa 28 / Czynszowa;0;brak;0
+P270218;13070209;21.04545733;52.26014506;ul. Wile艅ska 63;wyrwany do odtworzenia;brak;wyrwany do odtworzenia
+W260105;17170301;20.97661411;52.22832918;ul. J. Korczaka 3;jest na zero;brak;jest na zero
+W260119;21260119;20.95897634;52.22322219;al. Prymasa Tysiaclecia 46;jest na zero;brak;jest na zero
+W260210;21260210;20.96722455;52.23355085;ul. Wolska / Skierniewicka 21;jest na zero;brak;jest na zero
+W260403;21260403;20.95611402;52.23502424;al. Prymasa Tysiaclecia 62;jest na zero;brak;jest na zero
+W260501;17170240;20.9740277;52.23547463;"Al. ""Solidarno艣ci""";jest na zero;brak;jest na zero
+W260508;17170218;20.9751804;52.23917661;ul. Karolkowa 63;jest na zero;brak;jest na zero
+W260604;17170230;20.97145943;52.23715567;ul. G贸rczewska 4;jest na zero;brak;jest na zero
