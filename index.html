@@ -343,8 +343,8 @@ function createSidebar(parkomaty, filter = "") {
 
   const grouped = {};
   parkomaty.forEach(p => {
-    const match = (p.kod + p.numer).toUpperCase().includes(filter);
-    if (!match && filter) return;
+    const text = `${p.kod} ${p.numer} ${p.adres}`.toUpperCase();
+if (!text.includes(filter) && filter) return;
 
     if (!grouped[p.strefa]) grouped[p.strefa] = [];
     grouped[p.strefa].push(p);
