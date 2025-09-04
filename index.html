@@ -155,11 +155,15 @@ document.addEventListener('DOMContentLoaded', function () {
       const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
       const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
 
-      const popup = `<b>Parkomat:</b> ${kod} / ${numer}<br/>
+      const popup = `<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
 <b>Adres:</b> ${p.adres}<br/>
 <b>Strefa:</b> ${p.strefa}` +
-(fotoDem ? `<br><b>Demontaż:</b><br><a href="${fotoDem}" target="_blank"><img src="${fotoDem}" style="max-width:200px;" referrerpolicy="no-referrer"></a>` : '') +
-(fotoFund ? `<br><b>Fundament:</b><br><a href="${fotoFund}" target="_blank"><img src="${fotoFund}" style="max-width:200px;" referrerpolicy="no-referrer"></a>` : '');
+(fotoZdemontowany ? `<br><a href="${zdemontowaneFoto[id]}" target="_blank">
+<img src="${zdemontowaneFoto[id]}" style="width:100px; height:auto;" referrerpolicy="no-referrer" alt="Zdjęcie demontażu">
+</a>` : '') +
+(fotoFundament ? `<br><a href="${fundamentyFoto[id]}" target="_blank">
+<img src="${fundamentyFoto[id]}" style="width:100px; height:auto;" referrerpolicy="no-referrer" alt="Zdjęcie fundamentu">
+</a>` : '');
       
       const key = kod+'_'+numer;
       if(markersMap[key]) { markersMap[key].setStyle({color:kolor}); markersMap[key].bindPopup(popup); }
