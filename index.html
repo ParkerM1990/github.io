@@ -155,9 +155,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
       const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
 
-      const popup = `<b>Parkomat:</b> ${kod} / ${numer}<br/><b>Adres:</b> ${p.adres}<br/><b>Strefa:</b> ${p.strefa}` +
-                    (fotoDem? `<br><b>Demontaż:</b><br><img src="${fotoDem}" style="max-width:200px;" referrerpolicy="no-referrer">`:'') +
-                    (fotoFund? `<br><b>Fundament:</b><br><img src="${fotoFund}" style="max-width:200px;" referrerpolicy="no-referrer">`:'');
+      const popup = `<b>Parkomat:</b> ${kod} / ${numer}<br/>
+<b>Adres:</b> ${p.adres}<br/>
+<b>Strefa:</b> ${p.strefa}` +
+(fotoDem ? `<br><b>Demontaż:</b><br><a href="${fotoDem}" target="_blank"><img src="${fotoDem}" style="max-width:200px;" referrerpolicy="no-referrer"></a>` : '') +
+(fotoFund ? `<br><b>Fundament:</b><br><a href="${fotoFund}" target="_blank"><img src="${fotoFund}" style="max-width:200px;" referrerpolicy="no-referrer"></a>` : '');
       
       const key = kod+'_'+numer;
       if(markersMap[key]) { markersMap[key].setStyle({color:kolor}); markersMap[key].bindPopup(popup); }
