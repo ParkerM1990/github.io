@@ -49,6 +49,14 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.4);
       margin-bottom: 10px;
     }
+  #mapdiv {
+  padding: 0;
+}
+ .leaflet-top,
+.leaflet-left {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}   
 #sidebarToggle {
   position: absolute;
   top: 10px;
@@ -175,7 +183,12 @@ margin-top: 30px;}
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const mapa = L.map("map").setView([52.2297, 21.0122], 13);
+    const mapa = L.map("map", {
+  minZoom: 10,
+  maxZoom: 18,
+  bounceAtZoomLimits: false,
+  touchZoom: true
+}).setView([52.2297, 21.0122], 13);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(mapa);
