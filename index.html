@@ -158,11 +158,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const popup = `<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
 <b>Adres:</b> ${p.adres}<br/>
 <b>Strefa:</b> ${p.strefa}` +
-(fotoZdemontowany ? `<br><a href="${zdemontowaneFoto[id]}" target="_blank">
-<img src="${zdemontowaneFoto[id]}" style="width:100px; height:auto;" referrerpolicy="no-referrer" alt="Zdjęcie demontażu">
+(fotoDem ? `<br><a href="${fotoDem}" target="_blank">
+<img src="${fotoDem}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer" alt="Zdjęcie demontażu">
 </a>` : '') +
-(fotoFundament ? `<br><a href="${fundamentyFoto[id]}" target="_blank">
-<img src="${fundamentyFoto[id]}" style="width:100px; height:auto;" referrerpolicy="no-referrer" alt="Zdjęcie fundamentu">
+(fotoFund ? `<br><a href="${fotoFund}" target="_blank">
+<img src="${fotoFund}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer" alt="Zdjęcie fundamentu">
 </a>` : '');
       
       const key = kod+'_'+numer;
