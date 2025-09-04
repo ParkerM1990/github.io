@@ -196,6 +196,12 @@ margin-top: 30px;}
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(mapa);
+    // --- FIX 2: Obracanie ekranu na iOS ---
+    window.addEventListener("orientationchange", () => {
+        setTimeout(() => {
+            mapa.invalidateSize();
+        }, 200); // czeka aż ekran się obróci
+    });
     watchLocation();
 
     const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?output=csv';
