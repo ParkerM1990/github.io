@@ -11,7 +11,18 @@
 html, body { height: 100%; margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
 #refreshBtn { position: absolute; bottom: 120px; left: 10px; z-index:1001; background:#007bff; color:#fff; border:none; padding:10px; cursor:pointer; border-radius:5px; }
-/* ... pozostałe style jak w Twoim kodzie ... */
+#sidebarToggle { position:absolute; top:10px; left:10px; z-index:1101; background:#007bff; color:#fff; padding:8px 12px; border-radius:4px; cursor:pointer; font-size:20px; box-shadow:0 2px 4px rgba(0,0,0,0.3);}
+#sidebar { position:absolute; top:0; left:0; bottom:0; width:280px; background: rgba(255,255,255,0.97); z-index:1100; overflow-y:auto; padding:10px; box-shadow:2px 0 5px rgba(0,0,0,0.3); transform: translateX(-100%); transition: transform 0.3s ease;}
+#sidebar.open { transform: translateX(0);}
+#sidebarSearch { width:100%; padding:6px; margin-bottom:10px; border:1px solid #ccc; font-size:16px !important; }
+.strefa-group { margin-bottom:10px; }
+.strefa-header { font-weight:bold; margin-top:10px; cursor:pointer; background:#f1f1f1; padding:5px; border-radius:4px; }
+.parkomat-link { padding-left:10px; cursor:pointer; margin:3px 0; }
+.parkomat-link:hover { text-decoration:underline; }
+.parkomat-link.active { background:#007bff; color:#fff; border-radius:3px; padding:2px 4px; }
+.legend { position: absolute; bottom: 30px; left: 10px; background: rgba(255,255,255,0.9); padding:10px; border-radius:5px; font-size:14px; line-height:18px; color:#333; z-index:1000; box-shadow:0 0 5px rgba(0,0,0,0.4);}
+.legend div { display:flex; align-items:center;}
+.legend div span { width:18px; height:18px; margin-right:5px; display:inline-block;}
 </style>
 </head>
 <body>
@@ -29,7 +40,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
     <button id="sidebarClose">×</button>
   </div>
   <div class="sidebar-search">
-    <input type="text" id="sidebarSearch" placeholder="Szukaj po numerze lub kodzie..." />
+    <input type="text" id="sidebarSearch" placeholder="Szukaj po numerze, kodzie lub adresie..." />
   </div>
   <div id="sidebarContent"></div>
 </div>
@@ -127,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
       option.value=s; option.text=s; 
       select.appendChild(option); 
     });
-    select.addEventListener('change',()=>{ updateMarkers(); createSidebar(); });
+    select.addEventListener('change',()=>{ updateMarkers(); createSidebar(document.getElementById('sidebarSearch').value); });
   }
 
   function updateMarkers() {
@@ -138,12 +149,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const numer = (p.numer || '').toUpperCase().trim();
       if (!kod && !numer) return;
 
+      // filtrowanie po strefie
       if (selectedStrefy.length>0 && !selectedStrefy.includes(p.strefa)) {
         const key = kod || numer;
-        if (markersMap[key]) {
-          mapa.removeLayer(markersMap[key]);
-          delete markersMap[key];
-        }
+        if (markersMap[key]) { mapa.removeLayer(markersMap[key]); delete markersMap[key]; }
         return;
       }
 
@@ -175,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Sidebar i wyszukiwarka jak w Twoim kodzie
   function createSidebar(filter=''){
     const container=document.getElementById('sidebarContent'); container.innerHTML='';
     const grouped={};
@@ -191,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const list=document.createElement('div'); list.style.display='none';
       header.addEventListener('click',()=>{ list.style.display=list.style.display==='none'?'block':'none'; });
       grouped[strefa].forEach(p=>{
-        const item=document.createElement('div'); item.className='parkomat-link'; item.textContent=`${p.kod} / ${p.numer}`;
+        const item=document.createElement('div'); item.className='parkomat-link'; item.textContent=`${p.kod} / ${p.numer} - ${p.adres}`;
         item.addEventListener('click',()=>{
           mapa.setView([p.lat,p.lon],16);
           if(window.tempTooltip){ mapa.removeLayer(window.tempTooltip); clearTimeout(window.tooltipTimeout); }
