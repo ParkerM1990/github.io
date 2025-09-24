@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mapa Parkomatów - Wyszukiwanie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-  <style>
-    html, body { height: 100%; margin: 0; padding: 0; }
-    #map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
-    #refreshBtn { position: absolute; bottom: 120px; left: 10px; z-index:1001; background:#007bff; color:#fff; border:none; padding:10px; cursor:pointer; border-radius:5px; }
-    .legend { position: absolute; bottom: 30px; left: 10px; background: rgba(255,255,255,0.9); padding:10px; border-radius:5px; font-size:14px; line-height:18px; color:#333; z-index:1000; box-shadow:0 0 5px rgba(0,0,0,0.4);}
-    .legend div { display:flex; align-items:center;}
-    .legend div span { width:18px; height:18px; margin-right:5px; display:inline-block;}
-    .leaflet-control-zoom {margin-top:60px !important;}
-    #filter { position:absolute; top:10px; right:10px; background: rgba(255,255,255,0.9); padding:10px; border-radius:5px; z-index:1000; box-shadow:0 0 5px rgba(0,0,0,0.4); margin-bottom:10px;}
-    #sidebarToggle { position:absolute; top:10px; left:10px; z-index:1101; background:#007bff; color:#fff; padding:8px 12px; border-radius:4px; cursor:pointer; font-size:20px; box-shadow:0 2px 4px rgba(0,0,0,0.3);}
-    #sidebar { position:absolute; top:0; left:0; bottom:0; width:280px; background: rgba(255,255,255,0.97); z-index:1100; overflow-y:auto; padding:10px; box-shadow:2px 0 5px rgba(0,0,0,0.3); transform: translateX(-100%); transition: transform 0.3s ease;}
-    #sidebar.open { transform: translateX(0);}
-    #sidebarSearch { width:100%; padding:6px; margin-bottom:10px; border:1px solid #ccc; font-size:16px !important; }
-    .strefa-group { margin-bottom:10px; }
-    .strefa-header { font-weight:bold; margin-top:10px; cursor:pointer; background:#f1f1f1; padding:5px; border-radius:4px; }
-    .parkomat-link { padding-left:10px; cursor:pointer; margin:3px 0; }
-    .parkomat-link:hover { text-decoration:underline; }
-    .parkomat-link.active { background:#007bff; color:#fff; border-radius:3px; padding:2px 4px; }
-    #sidebarHeader { display:flex; justify-content:space-between; align-items:center; font-weight:bold; padding-bottom:10px; }
-    .sidebar-title { display:inline-block; margin-left:50px; }
-    .sidebar-search { display:block; margin-top:30px; }
-    #sidebarClose { background:none; border:none; font-size:20px; cursor:pointer; color:#333; }
-  </style>
+<meta charset="UTF-8" />
+<title>Mapa Parkomatów - Wyszukiwanie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<style>
+html, body { height: 100%; margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+#refreshBtn { position: absolute; bottom: 120px; left: 10px; z-index:1001; background:#007bff; color:#fff; border:none; padding:10px; cursor:pointer; border-radius:5px; }
+/* ... pozostałe style jak w Twoim kodzie ... */
+</style>
 </head>
 <body>
 
@@ -62,24 +45,18 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const mapa = L.map("map", { minZoom:10, maxZoom:18, bounceAtZoomLimits:false, touchZoom:true }).setView([52.2297, 21.0122], 13);
+  const mapa = L.map("map").setView([52.2297, 21.0122], 13);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "&copy; OpenStreetMap contributors" }).addTo(mapa);
 
   let parkomatyData = [], fundamentyId = [], zdemontowaneId = [], markersMap = {}, zdemontowaneFoto = {}, fundamentyFoto = {}, locationMarker = null;
 
-  const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?gid=1351898769&single=true&output=csv';
-  const zdemontowaneUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVA5KWhFAp6bRgBFQH-oDmJgGlbzj3F91-vw1wvTKMCwpO-DjRZ3JoopFm2UarhmInDFPcUzPhz1D/pub?gid=1398714071&single=true&output=csv';
-  const parkomatyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSFwA2SPG1zKGbpx5jDLiT6bBIS3RHvZwL4b_6WeI6bdTQCoe0FJR0Ydgqzpb0UtvS42ngSopzN5NxE/pub?output=csv';
-
-  function fixMapResize(){ setTimeout(()=>{ mapa.invalidateSize(); },300); }
-  window.addEventListener("resize", fixMapResize);
-  window.addEventListener("orientationchange", fixMapResize);
-  document.getElementById("sidebarSearch").addEventListener("focus", fixMapResize);
-  document.getElementById("sidebarSearch").addEventListener("blur", fixMapResize);
+  const fundamentyUrl = 'TUTAJ_FUNDAMENTY_CSV';
+  const zdemontowaneUrl = 'TUTAJ_ZDEMONTOWANE_CSV';
+  const parkomatyUrl = 'TUTAJ_PARKOMATY_CSV';
 
   function watchLocation() {
     if (!navigator.geolocation) return;
-    navigator.geolocation.watchPosition((pos) => {
+    navigator.geolocation.watchPosition(pos => {
       const { latitude, longitude } = pos.coords;
       if(locationMarker) mapa.removeLayer(locationMarker);
       locationMarker = L.circleMarker([latitude, longitude], { radius:10, color:"blue", fillOpacity:0.8 }).addTo(mapa).bindPopup("Twoja lokalizacja");
@@ -110,7 +87,13 @@ document.addEventListener('DOMContentLoaded', function () {
       results.data.forEach(row=>{
         const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']||'').toUpperCase().trim();
         const link = row['Zdjęcie parkomatu z numerem'];
-        if(id) { zdemontowaneId.push(id); if(link && link.includes("open?id=")){ const imgId = link.split("id=")[1]; zdemontowaneFoto[id] = `https://drive.google.com/thumbnail?id=${imgId}&sz=w500`; } }
+        if(id) { 
+          zdemontowaneId.push(id); 
+          if(link && link.includes("open?id=")){ 
+            const imgId = link.split("id=")[1]; 
+            zdemontowaneFoto[id] = `https://drive.google.com/thumbnail?id=${imgId}&sz=w500`; 
+          } 
+        }
       });
       updateMarkers();
       loadFundamenty();
@@ -118,15 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function loadFundamenty() {
-  Papa.parse(fundamentyUrl, {
-    download: true,
-    header: true,
-    complete: function(results) {
+    Papa.parse(fundamentyUrl, { download: true, header: true, complete: function(results) {
       fundamentyId = [];
       fundamentyFoto = {};
       results.data.forEach(row => {
-        const id = String(row['Numer odtworzonego fundamentu  np. A010123 albo 1050123'] || '')
-                    .toUpperCase().trim();
+        const id = String(row['Numer odtworzonego fundamentu  np. A010123 albo 1050123'] || '').toUpperCase().trim();
         const link = row['Zdjęcie odtworzonego fundamentu'];
         if (id) {
           fundamentyId.push(id);
@@ -137,70 +116,66 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
       updateMarkers();
-    }
-  });
-}
+    }});
+  }
 
   function updateStrefy(){
     const strefy = [...new Set(parkomatyData.map(p=>p.strefa))].sort();
     const select = document.getElementById('strefaSelect'); select.innerHTML='';
-    strefy.forEach(s=>{ const option=document.createElement('option'); option.value=s; option.text=s; select.appendChild(option); });
+    strefy.forEach(s=>{ 
+      const option=document.createElement('option'); 
+      option.value=s; option.text=s; 
+      select.appendChild(option); 
+    });
     select.addEventListener('change',()=>{ updateMarkers(); createSidebar(); });
   }
 
   function updateMarkers() {
-  const selectedStrefy = Array.from(document.getElementById('strefaSelect').selectedOptions).map(o => o.value);
+    const selectedStrefy = Array.from(document.getElementById('strefaSelect').selectedOptions).map(o => o.value);
 
-  parkomatyData.forEach(p => {
-    const kod = (p.kod || '').toUpperCase().trim();
-    const numer = (p.numer || '').toUpperCase().trim();
-    if (!kod && !numer) return;
+    parkomatyData.forEach(p => {
+      const kod = (p.kod || '').toUpperCase().trim();
+      const numer = (p.numer || '').toUpperCase().trim();
+      if (!kod && !numer) return;
 
-    // filtrowanie po strefie
-    if (selectedStrefy.length > 0 && !selectedStrefy.includes(p.strefa)) {
-      const key1 = kod || numer;
-      if (markersMap[key1]) {
-        mapa.removeLayer(markersMap[key1]);
-        delete markersMap[key1];
+      if (selectedStrefy.length>0 && !selectedStrefy.includes(p.strefa)) {
+        const key = kod || numer;
+        if (markersMap[key]) {
+          mapa.removeLayer(markersMap[key]);
+          delete markersMap[key];
+        }
+        return;
       }
-      return;
-    }
 
-    // sprawdzanie statusu
-    const isFundament = fundamentyId.includes(kod) || fundamentyId.includes(numer);
-    const isZdemontowany = zdemontowaneId.includes(kod) || zdemontowaneId.includes(numer);
+      const isFundament = fundamentyId.includes(kod) || fundamentyId.includes(numer);
+      const isZdemontowany = zdemontowaneId.includes(kod) || zdemontowaneId.includes(numer);
 
-    // kolejność kolorów: fundament > zdemontowany > zielony
-    let kolor = 'green';
-    if (isZdemontowany) kolor = 'red';
-    if (isFundament) kolor = 'black';
+      let kolor = 'green';
+      if (isZdemontowany) kolor='red';
+      if (isFundament) kolor='black';
 
-    const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
-    const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
+      const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
+      const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
 
-    const popup = `<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
+      const popup = `<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
 <b>Adres:</b> ${p.adres}<br/>
 <b>Strefa:</b> ${p.strefa}` +
-      (fotoDem ? `<br><a href="${fotoDem}" target="_blank">
-      <img src="${fotoDem}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer" alt="Zdjęcie demontażu">
-      </a>` : '') +
-      (fotoFund ? `<br><a href="${fotoFund}" target="_blank">
-      <img src="${fotoFund}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer" alt="Zdjęcie fundamentu">
-      </a>` : '');
+(fotoDem ? `<br><a href="${fotoDem}" target="_blank"><img src="${fotoDem}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer"></a>`:'') +
+(fotoFund ? `<br><a href="${fotoFund}" target="_blank"><img src="${fotoFund}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer"></a>`:'');
 
-    // aktualizacja markera
-    const key = kod || numer;
-    if (markersMap[key]) {
-      markersMap[key].setStyle({ color: kolor });
-      markersMap[key].bindPopup(popup);
-    } else {
-      const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
-      marker.bindPopup(popup);
-      markersMap[key] = marker;
-    }
-  });
-}
+      const key = kod || numer;
+      if (markersMap[key]) {
+        markersMap[key].setStyle({ color: kolor });
+        markersMap[key].bindPopup(popup);
+      } else {
+        const marker = L.circleMarker([p.lat, p.lon], { radius: 8, color: kolor, fillOpacity: 0.8 }).addTo(mapa);
+        marker.bindPopup(popup);
+        markersMap[key] = marker;
+      }
+    });
+  }
 
+  // Sidebar i wyszukiwarka jak w Twoim kodzie
   function createSidebar(filter=''){
     const container=document.getElementById('sidebarContent'); container.innerHTML='';
     const grouped={};
@@ -234,11 +209,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.getElementById('sidebarSearch').addEventListener('input', function(){ createSidebar(this.value); });
+  const sidebar = document.getElementById('sidebar');
   document.getElementById('sidebarToggle').addEventListener('click',()=>sidebar.classList.toggle('open'));
   document.getElementById('sidebarClose').addEventListener('click',()=>sidebar.classList.remove('open'));
   document.addEventListener('click', function(e){
-    const sidebar = document.getElementById('sidebar'), toggle = document.getElementById('sidebarToggle');
-    if(sidebar.classList.contains('open') && !sidebar.contains(e.target) && !toggle.contains(e.target)) sidebar.classList.remove('open');
+    if(sidebar.classList.contains('open') && !sidebar.contains(e.target) && !document.getElementById('sidebarToggle').contains(e.target)) sidebar.classList.remove('open');
   });
   document.getElementById('refreshBtn').addEventListener('click', loadZdemontowane);
 
