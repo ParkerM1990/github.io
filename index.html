@@ -154,27 +154,29 @@ document.addEventListener('DOMContentLoaded', function () {
   parkomatyData.forEach(p => {
     const kod = (p.kod || '').toUpperCase().trim();
     const numer = (p.numer || '').toUpperCase().trim();
-    const key = (kod || numer);   // 👉 zawsze jeden klucz
-
-    if (!key) return;
+    if (!kod && !numer) return;
 
     // filtrowanie po strefie
     if (selectedStrefy.length > 0 && !selectedStrefy.includes(p.strefa)) {
-      if (markersMap[key]) {
-        mapa.removeLayer(markersMap[key]);
-        delete markersMap[key];
+      const key1 = kod || numer;
+      if (markersMap[key1]) {
+        mapa.removeLayer(markersMap[key1]);
+        delete markersMap[key1];
       }
       return;
     }
 
     // sprawdzanie statusu
-    const isFundament = fundamentyId.includes(key);
-    const isZdemontowany = zdemontowaneId.includes(key);
+    const isFundament = fundamentyId.includes(kod) || fundamentyId.includes(numer);
+    const isZdemontowany = zdemontowaneId.includes(kod) || zdemontowaneId.includes(numer);
 
-    const kolor = isFundament ? 'black' : isZdemontowany ? 'red' : 'green';
+    // kolejność kolorów: fundament > zdemontowany > zielony
+    let kolor = 'green';
+    if (isZdemontowany) kolor = 'red';
+    if (isFundament) kolor = 'black';
 
-    const fotoDem = zdemontowaneFoto[key] || '';
-    const fotoFund = fundamentyFoto[key] || '';
+    const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
+    const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
 
     const popup = `<b>Parkomat:</b> ${p.kod} / ${p.numer}<br/>
 <b>Adres:</b> ${p.adres}<br/>
@@ -186,6 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
       <img src="${fotoFund}" style="width:100px; height:auto; cursor:pointer;" referrerpolicy="no-referrer" alt="Zdjęcie fundamentu">
       </a>` : '');
 
+    // aktualizacja markera
+    const key = kod || numer;
     if (markersMap[key]) {
       markersMap[key].setStyle({ color: kolor });
       markersMap[key].bindPopup(popup);
