@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       fundamentyId = [];
       fundamentyFoto = {};
       results.data.forEach(row => {
-        const id = String(row['Numer odtworzonego fundamentu  np. A010123 albo 1050123'] || '').toUpperCase().trim();
+        const id = String(row['Numer odtworzonego fundamentu np. A010123 albo 1050123'] || '').toUpperCase().trim();
         const link = row['Zdjęcie odtworzonego fundamentu'];
         if (id) {
           fundamentyId.push(id);
