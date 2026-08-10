@@ -114,9 +114,9 @@ function loadZdemontowane() {
           row['Numer parkomatu np. 17170316 dla którego wykonano fundament'] || ''
         ).toUpperCase().trim();
 
-        const lokalizacjaLink = String(
-          row['Zdjecie lokalizacji fundametu'] || ''
-        ).trim();
+        const zdjecieWykonanegoFundamentu = String(
+  row['Zdjęcie wykonanego fundamentu'] || ''
+).trim();
 
         const link = String(
           row['Zdjęcie parkomatu z numerem'] || ''
@@ -133,11 +133,9 @@ function loadZdemontowane() {
           // CZERWONY MARKER:
           // numer + zdjęcie lokalizacji fundamentu
           // ==========================================
-          if (lokalizacjaLink) {
-
-            zrobioneFundamentyId.push(id);
-
-          }
+          if (id && zdjecieWykonanegoFundamentu) {
+  zrobioneFundamentyId.push(id);
+}
 
 
           // Zdjęcie parkomatu z numerem
@@ -224,7 +222,6 @@ function loadZdemontowane() {
 const isZrobionyFundament =
   zrobioneFundamentyId.includes(kod) ||
   zrobioneFundamentyId.includes(numer);
-
 
 let kolor = 'green';
 
