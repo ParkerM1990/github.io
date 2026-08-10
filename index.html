@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function loadZdemontowane() {
     Papa.parse(zdemontowaneUrl, { download:true, header:true, complete:function(results){
-      zdemontowaneId=[]; zdemontowaneFoto={};
+      zdemontowaneId=[];fundamentyLokalizacjaFoto = {}; zdemontowaneFoto={};
       results.data.forEach(row=>{
         const id = String(row['Numer zdemontowanego parkomatu np. Z180512 albo O050123']||'').toUpperCase().trim();
          const lokalizacjaLink = row['Zdjecie lokalizacji fundametu'];
@@ -125,7 +125,6 @@ fundamentyLokalizacjaFoto[id] =
     Papa.parse(fundamentyUrl, { download: true, header: true, complete: function(results) {
       fundamentyId = [];
       fundamentyFoto = {};
-      fundamentyLokalizacjaFoto = {};
       results.data.forEach(row => {
         const id = String(row['Numer odtworzonego fundamentu np. A010123 albo 1050123'] || '').toUpperCase().trim();
        
