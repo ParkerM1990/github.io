@@ -214,24 +214,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // DANE
   // ==========================================================
 
-  let parkomatyData = [];
-
-  let fundamentyId = [];
-
-  // NUMERY, DLA KTÓRYCH JEST NUMER + ZDJĘCIE WYKONANEGO FUNDAMENTU
-  let zrobioneFundamentyId = [];
-
-  let zdemontowaneId = [];
-
-  let markersMap = {};
-
-  let zdemontowaneFoto = {};
-
-  let fundamentyFoto = {};
-
-  let fundamentyLokalizacjaFoto = {};
-
-  let locationMarker = null;
+  let parkomatyData = [],
+    fundamentyId = [],
+    zrobioneFundamentyId = [],
+    zdemontowaneId = [],
+    markersMap = {},
+    zdemontowaneFoto = {},
+    fundamentyFoto = {},
+    fundamentyLokalizacjaFoto = {},
+    wykonaneFundamentyFoto = {},
+    locationMarker = null;
 
 
   // ==========================================================
@@ -380,7 +372,35 @@ document.addEventListener('DOMContentLoaded', function () {
           const zdjecieWykonanegoFundamentu = String(
             row['Zdjęcie wykonanego fundamentu'] || ''
           ).trim();
+if (zdjecieWykonanegoFundamentu) {
 
+  let imgId = '';
+
+  if (zdjecieWykonanegoFundamentu.includes('open?id=')) {
+
+    imgId =
+      zdjecieWykonanegoFundamentu
+        .split('open?id=')[1]
+        .split('&')[0];
+
+  }
+  else if (zdjecieWykonanegoFundamentu.includes('/file/d/')) {
+
+    imgId =
+      zdjecieWykonanegoFundamentu
+        .split('/file/d/')[1]
+        .split('/')[0];
+
+  }
+
+  if (imgId) {
+
+    wykonaneFundamentyFoto[id] =
+      `https://drive.google.com/thumbnail?id=${imgId}&sz=w800`;
+
+  }
+
+}
 
           // ==================================================
           // ZDJĘCIE PARKOMATU Z NUMEREM
@@ -763,7 +783,10 @@ document.addEventListener('DOMContentLoaded', function () {
         fundamentyLokalizacjaFoto[kod] ||
         fundamentyLokalizacjaFoto[numer] ||
         '';
-
+const fotoWykonanyFundament =
+  wykonaneFundamentyFoto[kod] ||
+  wykonaneFundamentyFoto[numer] ||
+  '';
 
       // ======================================================
       // NUMER PARKOMATU DO FORMULARZA
@@ -909,7 +932,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         ''
 
-      );
+      )
+        +
+
+// 2. ZDJĘCIE WYKONANEGO FUNDAMENTU
+
+(fotoWykonanyFundament
+  ? `<br><br>
+     <b>🧱 Zdjęcie wykonanego fundamentu:</b><br>
+     <a href="${fotoWykonanyFundament}" target="_blank">
+       <img
+         src="${fotoWykonanyFundament}"
+         style="max-width:100%;height:auto;"
+         referrerpolicy="no-referrer">
+     </a>`
+  : '');
 
 
       // ======================================================
