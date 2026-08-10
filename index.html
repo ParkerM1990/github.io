@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mapa = L.map("map").setView([52.2297, 21.0122], 13);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "&copy; OpenStreetMap contributors" }).addTo(mapa);
 
-  let parkomatyData = [], fundamentyId = [], zdemontowaneId = [], markersMap = {}, zdemontowaneFoto = {}, fundamentyFoto = {},fundamentyLokalizacjaFoto = {}, locationMarker = null;
+  let parkomatyData = [], fundamentyId = [], zrobioneFundamentyId = [], zdemontowaneId = [], markersMap = {}, zdemontowaneFoto = {}, fundamentyFoto = {}, fundamentyLokalizacjaFoto = {}, locationMarker = null;
 
   const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?gid=1351898769&single=true&output=csv'; 
   const zdemontowaneUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRf1iWp2wpwnFPgf7FGoj3YcHGFHTjK5dPPBtqUWkCDpEU1EVBs2xaYuJcBRh6OBWbj-1DpiezhqTop/pub?output=csv'; 
@@ -95,31 +95,80 @@ document.addEventListener('DOMContentLoaded', function () {
       loadZdemontowane();
     }});
   }
+function loadZdemontowane() {
 
-  function loadZdemontowane() {
-    Papa.parse(zdemontowaneUrl, { download:true, header:true, complete:function(results){
-      zdemontowaneId=[];fundamentyLokalizacjaFoto = {}; zdemontowaneFoto={};
-      results.data.forEach(row=>{
-        const id = String(row['Numer parkomatu np. 17170316 dla którego wykonano fundament']||'').toUpperCase().trim();
-         const lokalizacjaLink = row['Zdjecie lokalizacji fundametu'];
-        const link = row['Zdjęcie parkomatu z numerem'];
-        if(id) { 
-          zdemontowaneId.push(id); 
-          if(link && link.includes("open?id=")){ 
-            const imgId = link.split("id=")[1]; 
-            zdemontowaneFoto[id] = `https://drive.google.com/thumbnail?id=${imgId}&sz=w500`; 
-          } 
+  Papa.parse(zdemontowaneUrl, {
+    download: true,
+    header: true,
+
+    complete: function(results) {
+
+      zdemontowaneId = [];
+      zrobioneFundamentyId = [];
+      fundamentyLokalizacjaFoto = {};
+      zdemontowaneFoto = {};
+
+      results.data.forEach(row => {
+
+        const id = String(
+          row['Numer parkomatu np. 17170316 dla którego wykonano fundament'] || ''
+        ).toUpperCase().trim();
+
+        const lokalizacjaLink = String(
+          row['Zdjecie lokalizacji fundametu'] || ''
+        ).trim();
+
+        const link = String(
+          row['Zdjęcie parkomatu z numerem'] || ''
+        ).trim();
+
+
+        // Sam numer parkomatu
+        if (id) {
+
+          zdemontowaneId.push(id);
+
+
+          // ==========================================
+          // CZERWONY MARKER:
+          // numer + zdjęcie lokalizacji fundamentu
+          // ==========================================
+          if (lokalizacjaLink) {
+
+            zrobioneFundamentyId.push(id);
+
+          }
+
+
+          // Zdjęcie parkomatu z numerem
+          if (link && link.includes("open?id=")) {
+
+            const imgId = link.split("id=")[1];
+
+            zdemontowaneFoto[id] =
+              `https://drive.google.com/thumbnail?id=${imgId}&sz=w500`;
+          }
+
+
+          // Zdjęcie lokalizacji fundamentu
           if (lokalizacjaLink && lokalizacjaLink.includes("open?id=")) {
-const imgId = lokalizacjaLink.split("id=")[1];
-fundamentyLokalizacjaFoto[id] =
-`https://drive.google.com/thumbnail?id=${imgId}&sz=w800`;
-}
+
+            const imgId = lokalizacjaLink.split("id=")[1];
+
+            fundamentyLokalizacjaFoto[id] =
+              `https://drive.google.com/thumbnail?id=${imgId}&sz=w800`;
+          }
+
         }
+
       });
+
       updateMarkers();
       loadFundamenty();
-    }});
-  }
+
+    }
+  });
+}
 
   function loadFundamenty() {
     Papa.parse(fundamentyUrl, { download: true, header: true, complete: function(results) {
@@ -168,12 +217,24 @@ fundamentyLokalizacjaFoto[id] =
         return;
       }
 
-      const isFundament = fundamentyId.includes(kod) || fundamentyId.includes(numer);
-      const isZdemontowany = zdemontowaneId.includes(kod) || zdemontowaneId.includes(numer);
+      const isFundament =
+  fundamentyId.includes(kod) ||
+  fundamentyId.includes(numer);
 
-      let kolor = 'green';
-      if (isZdemontowany) kolor='red';
-      if (isFundament) kolor='black';
+const isZrobionyFundament =
+  zrobioneFundamentyId.includes(kod) ||
+  zrobioneFundamentyId.includes(numer);
+
+
+let kolor = 'green';
+
+if (isZrobionyFundament) {
+  kolor = 'red';
+}
+
+if (isFundament) {
+  kolor = 'black';
+}
 
       const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
       const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
