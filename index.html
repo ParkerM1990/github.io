@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mapa = L.map("map").setView([52.2297, 21.0122], 13);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "&copy; OpenStreetMap contributors" }).addTo(mapa);
 
-  let parkomatyData = [], fundamentyId = [], zdemontowaneId = [], markersMap = {}, zdemontowaneFoto = {}, fundamentyFoto = {}, locationMarker = null;
+  let parkomatyData = [], fundamentyId = [], zdemontowaneId = [], markersMap = {}, zdemontowaneFoto = {}, fundamentyFoto = {},fundamentyLokalizacjaFoto = {}, locationMarker = null;
 
   const fundamentyUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBVT8MoLx1Zaft1gTfqkWwdoSqDBKiUk8IFI7-D4NxriMKWsPSJdfayhncS21HaNj7Eg7Y0pGrr0oE/pub?gid=1351898769&single=true&output=csv'; 
   const zdemontowaneUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRf1iWp2wpwnFPgf7FGoj3YcHGFHTjK5dPPBtqUWkCDpEU1EVBs2xaYuJcBRh6OBWbj-1DpiezhqTop/pub?output=csv'; 
@@ -119,8 +119,10 @@ document.addEventListener('DOMContentLoaded', function () {
     Papa.parse(fundamentyUrl, { download: true, header: true, complete: function(results) {
       fundamentyId = [];
       fundamentyFoto = {};
+      fundamentyLokalizacjaFoto = {};
       results.data.forEach(row => {
         const id = String(row['Numer odtworzonego fundamentu np. A010123 albo 1050123'] || '').toUpperCase().trim();
+        const lokalizacjaLink = row['Zdjecie lokalizacji fundametu'];
         const link = row['Zdjęcie odtworzonego fundamentu'];
         if (id) {
           fundamentyId.push(id);
@@ -128,6 +130,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const imgId = link.split("id=")[1];
             fundamentyFoto[id] = `https://drive.google.com/thumbnail?id=${imgId}&sz=w500`;
           }
+          if (lokalizacjaLink && lokalizacjaLink.includes("open?id=")) {
+11
+const imgId = lokalizacjaLink.split("id=")[1];
+12
+fundamentyLokalizacjaFoto[id] =
+13
+`https://drive.google.com/thumbnail?id=${imgId}&sz=w800`;
+14
+}
         }
       });
       updateMarkers();
@@ -169,6 +180,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const fotoDem = zdemontowaneFoto[kod] || zdemontowaneFoto[numer] || '';
       const fotoFund = fundamentyFoto[kod] || fundamentyFoto[numer] || '';
+      const fotoLokalizacja =
+2
+fundamentyLokalizacjaFoto[kod] ||
+3
+fundamentyLokalizacjaFoto[numer] ||
+4
+'';
 
       const numerParkomatu = p.numer || p.kod;
 
