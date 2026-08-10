@@ -220,6 +220,16 @@ const popup = `
      <a href="${fotoFund}" target="_blank">
        <img src="${fotoFund}" style="max-width:100%;height:auto;" referrerpolicy="no-referrer">
      </a>`
+  : '')
+  +
+      (fotoLokalizacja
+  ? `<br><br>
+     <b>Zdjęcie lokalizacji fundamentu:</b><br>
+     <a href="${fotoLokalizacja}" target="_blank">
+       <img src="${fotoLokalizacja}"
+            style="max-width:100%;height:auto;"
+            referrerpolicy="no-referrer">
+     </a>`
   : '');
 
       const key = kod || numer;
